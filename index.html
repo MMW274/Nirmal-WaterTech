@@ -20,7 +20,7 @@ body{font-family:'Instrument Sans',sans-serif;color:#1a2332;background:#fff;over
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
-
+ 
 /* ─── TOKENS ─── */
 :root{
   --blue:#1859d4;
@@ -42,17 +42,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   --sh:0 2px 12px rgba(24,89,212,0.08),0 1px 3px rgba(0,0,0,0.04);
   --sh-lg:0 8px 36px rgba(24,89,212,0.13),0 2px 8px rgba(0,0,0,0.06);
 }
-
+ 
 /* ─── TYPOGRAPHY ─── */
 .display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;line-height:1.05}
 .heading{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-0.025em;line-height:1.15}
 .label{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue)}
-
+ 
 /* ─── LAYOUT ─── */
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 .section{padding:96px 0}
 .section-sm{padding:72px 0}
-
+ 
 /* ─── BUTTONS ─── */
 .btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:12px 24px;border-radius:100px;transition:all 0.18s;white-space:nowrap}
 .btn-blue{background:var(--blue);color:#fff}
@@ -63,7 +63,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-white:hover{background:#f0f4ff;transform:translateY(-1px);box-shadow:var(--sh)}
 .btn-arrow::after{content:'→';transition:transform 0.18s}
 .btn-arrow:hover::after{transform:translateX(3px)}
-
+ 
 /* ─── NAV ─── */
 #nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
@@ -92,7 +92,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .mob-nav a{font-size:16px;font-weight:500;color:var(--slate);padding:13px 14px;border-radius:10px}
 .mob-nav a:hover{background:var(--bg);color:var(--blue)}
 .mob-nav .mob-cta{background:var(--blue);color:#fff;margin-top:8px;text-align:center;justify-content:center;border-radius:100px;padding:14px;font-weight:700}
-
+ 
 /* ─── HERO ─── */
 .hero{padding:130px 0 80px;background:var(--white);position:relative;overflow:hidden}
 .hero-bg-shape{
@@ -122,7 +122,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--slate)}
 .hero-trust-item svg{width:15px;height:15px;fill:var(--teal);flex-shrink:0}
 .hero-trust-sep{width:1px;height:16px;background:var(--border)}
-
+ 
 /* Hero visual */
 .hero-visual{position:relative;z-index:1}
 .hero-main-card{
@@ -149,20 +149,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero-iso-strip svg{width:18px;height:18px;fill:var(--teal);flex-shrink:0}
 .hero-iso-text{font-size:13px;font-weight:600;color:#0a6e52}
 .hero-iso-sub{font-size:11px;color:#3d9e7e;font-weight:400;margin-top:1px}
-
+ 
 /* Floating photo placeholder */
-.hero-photo-float{
-  position:absolute;bottom:-24px;right:-24px;
-  width:140px;height:110px;border-radius:14px;overflow:hidden;
-  border:3px solid #fff;box-shadow:var(--sh-lg);
-}
-.photo-placeholder{
-  width:100%;height:100%;background:var(--blue-pale);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
-}
-.photo-placeholder svg{width:28px;height:28px;fill:var(--blue);opacity:0.5}
-.photo-placeholder span{font-size:10px;color:var(--blue);opacity:0.6;font-weight:600;text-align:center;padding:0 8px}
-
+ 
+ 
 /* ─── SERVICES ─── */
 .services{background:var(--bg)}
 .sec-hd{margin-bottom:48px}
@@ -183,7 +173,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .srv p{font-size:13.5px;color:var(--slate);line-height:1.6}
 .srv-more{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--blue);margin-top:14px;transition:gap 0.15s}
 .srv:hover .srv-more{gap:9px}
-
+ 
 /* ─── ABOUT ─── */
 .about{background:var(--white)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
@@ -195,7 +185,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .chk{display:flex;align-items:flex-start;gap:11px;font-size:14.5px;color:#2d3748;font-weight:500}
 .chk-ico{width:20px;height:20px;border-radius:50%;background:var(--teal-pale);border:1.5px solid rgba(10,143,107,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .chk-ico svg{width:10px;height:10px;stroke:var(--teal);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-
+ 
 /* About visual panel */
 .about-panel{
   background:var(--navy);border-radius:var(--r-xl);
@@ -219,14 +209,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .ap-iso svg{width:14px;height:14px;fill:#4ade80}
 .ap-addr{font-size:12px;color:rgba(255,255,255,0.35);text-align:center;line-height:1.8;position:relative;z-index:1}
-
+ 
 /* Photo placeholder grid */
-.ap-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;position:relative;z-index:1}
-.ap-photo{border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;transition:background 0.18s}
-.ap-photo:hover{background:rgba(255,255,255,0.1)}
-.ap-photo svg{width:24px;height:24px;fill:rgba(255,255,255,0.25)}
-.ap-photo span{font-size:10px;color:rgba(255,255,255,0.25);font-weight:600;text-align:center;padding:0 8px;line-height:1.4}
-
+.ap-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;position:relative;z-index:1}
+.ap-cap{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;transition:background 0.18s}
+.ap-cap:hover{background:rgba(255,255,255,0.1)}
+.ap-cap-icon{width:36px;height:36px;border-radius:9px;background:rgba(24,89,212,0.3);display:flex;align-items:center;justify-content:center}
+.ap-cap-icon svg{width:18px;height:18px;fill:#93c5fd}
+.ap-cap-text{font-size:11px;font-weight:600;color:rgba(255,255,255,0.6);text-align:center;letter-spacing:0.03em}
+ 
 /* ─── INDUSTRIES ─── */
 .industries{background:var(--bg)}
 .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:40px}
@@ -238,7 +229,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .ind:hover{background:var(--blue-pale);border-color:rgba(24,89,212,0.2);color:var(--blue-dark);transform:translateX(3px)}
 .ind-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
-
+ 
 /* ─── QUOTE ─── */
 .quote-sec{background:var(--white)}
 .quote-wrap{
@@ -277,7 +268,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .form-ok-ico svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .form-ok h4{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .form-ok p{font-size:14px;color:var(--slate)}
-
+ 
 /* ─── CONTACT ─── */
 .contact{background:var(--bg)}
 .contact-grid{display:grid;grid-template-columns:1fr 2fr;gap:24px;margin-top:40px}
@@ -292,7 +283,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .cval a:hover{color:var(--blue-dark)}
 .map-box{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh)}
 .map-box iframe{width:100%;height:380px;border:none;display:block}
-
+ 
 /* ─── FOOTER ─── */
 footer{background:var(--navy);color:rgba(255,255,255,0.5)}
 .footer-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding:64px 0 44px}
@@ -306,14 +297,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
 .fcol ul li a{font-size:13.5px;transition:color 0.15s}
 .fcol ul li a:hover{color:rgba(255,255,255,0.9)}
 .footer-bot{border-top:1px solid rgba(255,255,255,0.07);padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px}
-
+ 
 /* ─── SCROLL REVEAL ─── */
 .sr{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
 .sr.d1{transition-delay:0.1s}
 .sr.d2{transition-delay:0.2s}
 .sr.d3{transition-delay:0.3s}
 .sr.vis{opacity:1;transform:none}
-
+ 
 /* ─── RESPONSIVE ─── */
 @media(max-width:960px){
   .srv-grid{grid-template-columns:1fr 1fr}
@@ -344,7 +335,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
 </style>
 </head>
 <body>
-
+ 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
   <div class="nav-wrap">
@@ -377,7 +368,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </button>
   </div>
 </nav>
-
+ 
 <nav class="mob-nav" id="mobNav">
   <a href="#services" onclick="closeMob()">Services</a>
   <a href="#about" onclick="closeMob()">About</a>
@@ -385,7 +376,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
   <a href="#contact" onclick="closeMob()">Contact</a>
   <a href="#quote" onclick="closeMob()" class="mob-cta btn">Get a Free Quote →</a>
 </nav>
-
+ 
 <!-- ═══ HERO ═══ -->
 <section class="hero" id="home">
   <div class="hero-bg-shape"></div>
@@ -425,7 +416,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
           </div>
         </div>
       </div>
-
+ 
       <!-- Hero Card (visible on desktop) -->
       <div class="hero-visual sr">
         <div class="hero-main-card">
@@ -462,17 +453,12 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
             </div>
           </div>
         </div>
-        <div class="hero-photo-float">
-          <div class="photo-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
-            <span>Add plant photo</span>
-          </div>
-        </div>
+ 
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ SERVICES ═══ -->
 <section class="services section" id="services">
   <div class="wrap">
@@ -521,7 +507,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ ABOUT ═══ -->
 <section class="about section" id="about">
   <div class="wrap">
@@ -551,23 +537,43 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
           <div class="ap-tagline">"Ultimate Solution Providers For Environment Protection"</div>
         </div>
         <div class="ap-divider"></div>
-        <!-- Photo placeholders — swap with real <img> tags later -->
-        <div class="ap-photos">
-          <div class="ap-photo">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
-            <span>RO Plant Photo</span>
+        <!-- Key capabilities grid -->
+        <div class="ap-caps">
+          <div class="ap-cap">
+            <div class="ap-cap-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.13 0-1.9.16-2.53.33C14.28 12.14 16 8.73 17 8z"/></svg>
+            </div>
+            <div class="ap-cap-text">RO Plants</div>
           </div>
-          <div class="ap-photo">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
-            <span>ETP Plant Photo</span>
+          <div class="ap-cap">
+            <div class="ap-cap-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            </div>
+            <div class="ap-cap-text">ETP / STP</div>
           </div>
-          <div class="ap-photo">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
-            <span>STP Plant Photo</span>
+          <div class="ap-cap">
+            <div class="ap-cap-icon">
+              <svg viewBox="0 0 24 24"><path d="M19.5 12c0-1.23-.37-2.37-1-3.33V5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v1H10V5a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3.67C4.37 9.63 4 10.77 4 12s.37 2.37 1 3.33V19a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1h4v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3.67c.63-.96 1-2.1 1-3.33z"/></svg>
+            </div>
+            <div class="ap-cap-text">Softeners</div>
           </div>
-          <div class="ap-photo">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
-            <span>Softener Photo</span>
+          <div class="ap-cap">
+            <div class="ap-cap-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+            </div>
+            <div class="ap-cap-text">DM / DI Plants</div>
+          </div>
+          <div class="ap-cap">
+            <div class="ap-cap-icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2.05V4.05C17.39 4.59 20.5 8.58 19.96 12.97C19.5 16.61 16.64 19.5 13 19.93V21.93C18.5 21.38 22.5 16.5 21.95 11C21.5 6.25 17.73 2.5 13 2.05Z"/></svg>
+            </div>
+            <div class="ap-cap-text">Filtration</div>
+          </div>
+          <div class="ap-cap">
+            <div class="ap-cap-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+            </div>
+            <div class="ap-cap-text">O&amp;M Contracts</div>
           </div>
         </div>
         <div class="ap-divider"></div>
@@ -583,7 +589,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ INDUSTRIES ═══ -->
 <section class="industries section-sm" id="industries">
   <div class="wrap">
@@ -608,7 +614,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ QUOTE ═══ -->
 <section class="quote-sec section" id="quote">
   <div class="wrap">
@@ -668,7 +674,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ CONTACT ═══ -->
 <section class="contact section-sm" id="contact">
   <div class="wrap">
@@ -701,7 +707,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
           <div class="cico"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg></div>
           <div>
             <div class="clabel">Email</div>
-            <div class="cval"><a href="mailto:nirmalwater@hotmail.com">nirmalwater@hotmail.com</a></div>
+            <div class="cval"><a href="/cdn-cgi/l/email-protection#f7999e859a969b8096839285b79f98839a969e9bd994989a"><span class="__cf_email__" data-cfemail="afc1c6ddc2cec3d8cedbcaddefc7c0dbc2cec6c381ccc0c2">[email&#160;protected]</span></a></div>
           </div>
         </div>
         <a href="#quote" class="btn btn-blue btn-arrow" style="width:100%;justify-content:center;margin-top:4px">Get a Free Quote</a>
@@ -712,7 +718,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="wrap">
@@ -754,7 +760,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
           <li><a href="tel:+919923134736">+91 99231 34736</a></li>
           <li><a href="tel:+919324284736">+91 93242 84736</a></li>
           <li><a href="tel:+917276081958">+91 72760 81958</a></li>
-          <li><a href="mailto:nirmalwater@hotmail.com">nirmalwater@hotmail.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#e886819a8589849f899c8d9aa880879c85898184c68b8785"><span class="__cf_email__" data-cfemail="412f28332c202d362035243301292e352c20282d6f222e2c">[email&#160;protected]</span></a></li>
           <li><a href="#contact">Ambernath (East), Thane</a></li>
         </ul>
       </div>
@@ -765,17 +771,17 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5)}
     </div>
   </div>
 </footer>
-
-<script>
+ 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll shadow
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('shadowed',scrollY>10);
 },{ passive:true });
-
+ 
 // Mobile nav
 function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
 function closeMob(){document.getElementById('mobNav').classList.remove('open')}
-
+ 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
@@ -787,7 +793,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     closeMob();
   });
 });
-
+ 
 // Quote form
 function submitQuote(){
   const n=document.getElementById('fn').value.trim();
@@ -802,15 +808,4 @@ function submitQuote(){
     phone:p,email:document.getElementById('fe').value,
     service:s,message:document.getElementById('fm').value
   });
-  document.getElementById('qform').style.display='none';
-  document.getElementById('formok').style.display='block';
-}
-
-// Scroll reveal
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
-</script>
-</body>
-</html>
+  d
