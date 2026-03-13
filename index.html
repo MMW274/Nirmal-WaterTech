@@ -662,44 +662,23 @@ async function submitQuote() {
   btn.disabled = true;
 
   try {
-    var res = await fetch('https://api.resend.com/emails', {
+    var res = await fetch('/api/send', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer re_Be5qoVn2_M8CP3xBqkEGM5rn6WD7MraiF'
-      },
-      body: JSON.stringify({
-        from: 'Nirmal Water Tech Website <quotes@nirmalwatertech.com>',
-        to: ['nirmalwater@hotmail.com'],
-        subject: 'New Quote Request — ' + service,
-        html:
-          '<h2 style="color:#1859d4;font-family:sans-serif">New Quote Request</h2>' +
-          '<table style="font-family:sans-serif;font-size:15px;border-collapse:collapse;width:100%">' +
-          '<tr><td style="padding:8px 12px;background:#f2f6fe;font-weight:700;width:140px">Name</td><td style="padding:8px 12px;border-bottom:1px solid #e5eaf2">' + name + '</td></tr>' +
-          '<tr><td style="padding:8px 12px;background:#f2f6fe;font-weight:700">Company</td><td style="padding:8px 12px;border-bottom:1px solid #e5eaf2">' + (company || '—') + '</td></tr>' +
-          '<tr><td style="padding:8px 12px;background:#f2f6fe;font-weight:700">Phone</td><td style="padding:8px 12px;border-bottom:1px solid #e5eaf2"><a href="tel:' + phone + '">' + phone + '</a></td></tr>' +
-          '<tr><td style="padding:8px 12px;background:#f2f6fe;font-weight:700">Email</td><td style="padding:8px 12px;border-bottom:1px solid #e5eaf2">' + (email || '—') + '</td></tr>' +
-          '<tr><td style="padding:8px 12px;background:#f2f6fe;font-weight:700">Service</td><td style="padding:8px 12px;border-bottom:1px solid #e5eaf2"><strong style="color:#1859d4">' + service + '</strong></td></tr>' +
-          '<tr><td style="padding:8px 12px;background:#f2f6fe;font-weight:700">Message</td><td style="padding:8px 12px">' + (message || '—') + '</td></tr>' +
-          '</table>' +
-          '<p style="font-family:sans-serif;font-size:13px;color:#718096;margin-top:24px">Sent from nirmalwatertech.com contact form</p>'
-      })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, company, phone, email, service, message })
     });
 
     if (res.ok) {
       document.getElementById('quoteForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
     } else {
-      var err = await res.json();
-      console.error('Resend error:', err);
       alert('Something went wrong. Please call us directly on +91 99231 34736.');
       btn.textContent = 'Send Request →';
       btn.disabled = false;
     }
   } catch(e) {
-    console.error(e);
     alert('Something went wrong. Please call us directly on +91 99231 34736.');
-    btn.textContent = 'Send Request →';
+    btn.textContent = 'Sending…';
     btn.disabled = false;
   }
 }
