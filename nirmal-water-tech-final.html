@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nirmal Water Tech — Water & Wastewater Treatment | Ambernath, Maharashtra</title>
+<meta name="description" content="ISO 9001:2015 certified water and wastewater treatment company. Industrial RO Plants, ETP, STP, Water Softeners. Turnkey EPC solutions. Ambernath, Thane, Maharashtra.">
+<meta name="keywords" content="water treatment plant Maharashtra, RO plant Ambernath, ETP Thane, STP industrial, Nirmal Water Tech, wastewater treatment India">
+<meta property="og:title" content="Nirmal Water Tech — Water & Wastewater Treatment">
+<meta property="og:description" content="ISO 9001:2015 certified. Turnkey EPC water treatment solutions. Ambernath, Maharashtra.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Instrument Sans',sans-serif;color:#1a2332;background:#fff;overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* ─── TOKENS ─── */
+:root{
+  --blue:#1859d4;
+  --blue-dark:#0f3fa3;
+  --blue-mid:#2d6be4;
+  --blue-pale:#e8f0fd;
+  --blue-xpale:#f2f6fe;
+  --navy:#0d1b35;
+  --teal:#0a8f6b;
+  --teal-pale:#e0f5ee;
+  --slate:#4a5568;
+  --slate-light:#718096;
+  --border:#e5eaf2;
+  --bg:#f7f9fc;
+  --white:#ffffff;
+  --r:10px;
+  --r-lg:18px;
+  --r-xl:28px;
+  --sh:0 2px 12px rgba(24,89,212,0.08),0 1px 3px rgba(0,0,0,0.04);
+  --sh-lg:0 8px 36px rgba(24,89,212,0.13),0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ─── TYPOGRAPHY ─── */
+.display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;line-height:1.05}
+.heading{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-0.025em;line-height:1.15}
+.label{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue)}
+
+/* ─── LAYOUT ─── */
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.section{padding:96px 0}
+.section-sm{padding:72px 0}
+
+/* ─── BUTTONS ─── */
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:12px 24px;border-radius:100px;transition:all 0.18s;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(24,89,212,0.3)}
+.btn-outline{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn-outline:hover{background:var(--blue-pale);transform:translateY(-1px)}
+.btn-white{background:#fff;color:var(--navy);font-weight:700}
+.btn-white:hover{background:#f0f4ff;transform:translateY(-1px);box-shadow:var(--sh)}
+.btn-arrow::after{content:'→';transition:transform 0.18s}
+.btn-arrow:hover::after{transform:translateX(3px)}
+
+/* ─── NAV ─── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);transition:box-shadow 0.2s;
+}
+#nav.shadowed{box-shadow:0 2px 20px rgba(0,0,0,0.07)}
+.nav-wrap{max-width:1080px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:66px}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.nav-logo-mark{flex-shrink:0;width:38px;height:38px}
+.nav-logo-text{display:flex;flex-direction:column;gap:1px}
+.nav-logo-name{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;color:var(--navy);letter-spacing:-0.02em;line-height:1}
+.nav-logo-cert{font-size:10px;color:var(--slate-light);font-weight:500;letter-spacing:0.04em}
+.nav-links{display:flex;gap:2px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--slate);padding:7px 13px;border-radius:8px;transition:all 0.15s}
+.nav-links a:hover{color:var(--blue);background:var(--blue-pale)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone-wrap{text-align:right}
+.nav-phone-label{font-size:10px;color:var(--slate-light);letter-spacing:0.06em;text-transform:uppercase}
+.nav-phone-num{font-size:13px;font-weight:700;color:var(--navy)}
+.ham{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:8px;transition:background 0.15s}
+.ham:hover{background:var(--bg)}
+.ham span{display:block;width:20px;height:1.5px;background:var(--slate);border-radius:2px;transition:all 0.2s}
+.mob-nav{display:none;flex-direction:column;position:fixed;top:66px;inset:auto 0 0 0;background:#fff;border-top:1px solid var(--border);padding:16px 28px 32px;gap:4px;z-index:199;overflow-y:auto}
+.mob-nav.open{display:flex}
+.mob-nav a{font-size:16px;font-weight:500;color:var(--slate);padding:13px 14px;border-radius:10px}
+.mob-nav a:hover{background:var(--bg);color:var(--blue)}
+.mob-nav .mob-cta{background:var(--blue);color:#fff;margin-top:8px;text-align:center;justify-content:center;border-radius:100px;padding:14px;font-weight:700}
+
+/* ─── HERO ─── */
+.hero{padding:130px 0 80px;background:var(--white);position:relative;overflow:hidden}
+.hero-bg-shape{
+  position:absolute;right:-200px;top:-100px;width:700px;height:700px;
+  background:var(--blue-xpale);border-radius:50%;
+  pointer-events:none;z-index:0;
+}
+.hero-bg-dots{
+  position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(circle,var(--border) 1px,transparent 1px);
+  background-size:36px 36px;mask-image:radial-gradient(ellipse 60% 100% at 0% 50%,black 30%,transparent 70%);
+  -webkit-mask-image:radial-gradient(ellipse 60% 100% at 0% 50%,black 30%,transparent 70%);
+}
+.hero-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--teal-pale);border:1px solid rgba(10,143,107,0.2);
+  border-radius:100px;padding:5px 14px 5px 5px;
+  font-size:12px;font-weight:600;color:#0a6e52;margin-bottom:24px;
+}
+.hero-badge-dot{background:#0a8f6b;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;letter-spacing:0.03em}
+.hero h1{font-size:clamp(38px,5vw,60px);color:var(--navy);margin-bottom:20px}
+.hero h1 span{color:var(--blue)}
+.hero-sub{font-size:17px;color:var(--slate);max-width:440px;line-height:1.7;margin-bottom:36px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.hero-trust{display:flex;align-items:center;gap:20px;padding-top:20px;border-top:1px solid var(--border)}
+.hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--slate)}
+.hero-trust-item svg{width:15px;height:15px;fill:var(--teal);flex-shrink:0}
+.hero-trust-sep{width:1px;height:16px;background:var(--border)}
+
+/* Hero visual */
+.hero-visual{position:relative;z-index:1}
+.hero-main-card{
+  background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl);
+  padding:36px 32px;box-shadow:var(--sh-lg);position:relative;overflow:hidden;
+}
+.hero-card-accent{
+  position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--blue) 0%,#60a5fa 100%);
+}
+.hero-logo-block{display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 0}
+.hero-logo-svg{width:76px;height:76px}
+.hero-brand-name{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:800;color:var(--navy);letter-spacing:-0.02em;text-align:center;line-height:1.2}
+.hero-brand-tag{font-size:12px;color:var(--slate-light);text-align:center;line-height:1.5;font-weight:400;font-style:italic;max-width:200px}
+.hero-divider{height:1px;background:var(--border);margin:8px 0}
+.hero-stats-row{display:flex;justify-content:space-around;padding:16px 0}
+.hstat-n{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:800;color:var(--blue);letter-spacing:-0.02em;text-align:center}
+.hstat-n sup{font-size:16px;color:var(--blue-mid)}
+.hstat-l{font-size:11px;color:var(--slate-light);font-weight:500;text-align:center;margin-top:3px;letter-spacing:0.02em}
+.hero-iso-strip{
+  margin-top:8px;background:var(--teal-pale);border-radius:var(--r);
+  padding:12px 16px;display:flex;align-items:center;gap:10px;
+}
+.hero-iso-strip svg{width:18px;height:18px;fill:var(--teal);flex-shrink:0}
+.hero-iso-text{font-size:13px;font-weight:600;color:#0a6e52}
+.hero-iso-sub{font-size:11px;color:#3d9e7e;font-weight:400;margin-top:1px}
+
+/* Floating photo placeholder */
+.hero-photo-float{
+  position:absolute;bottom:-24px;right:-24px;
+  width:140px;height:110px;border-radius:14px;overflow:hidden;
+  border:3px solid #fff;box-shadow:var(--sh-lg);
+}
+.photo-placeholder{
+  width:100%;height:100%;background:var(--blue-pale);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+}
+.photo-placeholder svg{width:28px;height:28px;fill:var(--blue);opacity:0.5}
+.photo-placeholder span{font-size:10px;color:var(--blue);opacity:0.6;font-weight:600;text-align:center;padding:0 8px}
+
+/* ─── SERVICES ─── */
+.services{background:var(--bg)}
+.sec-hd{margin-bottom:48px}
+.sec-hd .label{margin-bottom:10px}
+.sec-hd h2{font-size:clamp(28px,3.5vw,40px);color:var(--navy);margin-bottom:12px}
+.sec-hd p{font-size:16px;color:var(--slate);max-width:500px;line-height:1.7}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.srv{
+  background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:28px 24px 24px;transition:all 0.22s;position:relative;overflow:hidden;
+}
+.srv::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue-pale);transition:background 0.22s}
+.srv:hover{border-color:rgba(24,89,212,0.25);box-shadow:var(--sh-lg);transform:translateY(-3px)}
+.srv:hover::before{background:var(--blue)}
+.srv-ico{width:44px;height:44px;border-radius:11px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.srv-ico svg{width:22px;height:22px;fill:var(--blue)}
+.srv h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;font-family:'Bricolage Grotesque',sans-serif}
+.srv p{font-size:13.5px;color:var(--slate);line-height:1.6}
+.srv-more{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--blue);margin-top:14px;transition:gap 0.15s}
+.srv:hover .srv-more{gap:9px}
+
+/* ─── ABOUT ─── */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about-left{}
+.about-left .label{margin-bottom:10px}
+.about-left h2{font-size:clamp(28px,3.5vw,40px);color:var(--navy);margin-bottom:16px}
+.about-left p{font-size:15px;color:var(--slate);line-height:1.75;margin-bottom:14px}
+.about-checks{margin:24px 0 32px;display:flex;flex-direction:column;gap:11px}
+.chk{display:flex;align-items:flex-start;gap:11px;font-size:14.5px;color:#2d3748;font-weight:500}
+.chk-ico{width:20px;height:20px;border-radius:50%;background:var(--teal-pale);border:1.5px solid rgba(10,143,107,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.chk-ico svg{width:10px;height:10px;stroke:var(--teal);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* About visual panel */
+.about-panel{
+  background:var(--navy);border-radius:var(--r-xl);
+  padding:48px 40px;display:flex;flex-direction:column;align-items:center;gap:28px;
+  position:relative;overflow:hidden;
+}
+.about-panel-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 80% 20%,rgba(24,89,212,0.2) 0%,transparent 50%),radial-gradient(circle at 20% 80%,rgba(10,143,107,0.12) 0%,transparent 50%);
+}
+.ap-logo{display:flex;flex-direction:column;align-items:center;gap:14px;position:relative;z-index:1}
+.ap-logo-svg{width:80px;height:80px}
+.ap-name{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;text-align:center}
+.ap-tagline{font-size:12px;color:rgba(255,255,255,0.45);text-align:center;line-height:1.6;font-weight:400;font-style:italic;max-width:200px}
+.ap-divider{width:100%;height:1px;background:rgba(255,255,255,0.08);position:relative;z-index:1}
+.ap-iso{
+  background:rgba(10,143,107,0.15);border:1px solid rgba(10,143,107,0.3);
+  border-radius:100px;padding:9px 20px;
+  font-size:12px;font-weight:700;color:#4ade80;letter-spacing:0.07em;text-transform:uppercase;
+  display:flex;align-items:center;gap:7px;position:relative;z-index:1;
+}
+.ap-iso svg{width:14px;height:14px;fill:#4ade80}
+.ap-addr{font-size:12px;color:rgba(255,255,255,0.35);text-align:center;line-height:1.8;position:relative;z-index:1}
+
+/* Photo placeholder grid */
+.ap-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;position:relative;z-index:1}
+.ap-photo{border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;transition:background 0.18s}
+.ap-photo:hover{background:rgba(255,255,255,0.1)}
+.ap-photo svg{width:24px;height:24px;fill:rgba(255,255,255,0.25)}
+.ap-photo span{font-size:10px;color:rgba(255,255,255,0.25);font-weight:600;text-align:center;padding:0 8px;line-height:1.4}
+
+/* ─── INDUSTRIES ─── */
+.industries{background:var(--bg)}
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:40px}
+.ind{
+  background:var(--white);border:1px solid var(--border);border-radius:var(--r);
+  padding:14px 16px;display:flex;align-items:center;gap:9px;
+  font-size:13.5px;font-weight:500;color:#2d3748;
+  transition:all 0.18s;
+}
+.ind:hover{background:var(--blue-pale);border-color:rgba(24,89,212,0.2);color:var(--blue-dark);transform:translateX(3px)}
+.ind-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
+
+/* ─── QUOTE ─── */
+.quote-sec{background:var(--white)}
+.quote-wrap{
+  border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;
+  box-shadow:var(--sh-lg);
+}
+.quote-grid{display:grid;grid-template-columns:1fr 1.1fr}
+.ql{background:var(--navy);padding:56px 48px;position:relative;overflow:hidden}
+.ql-bg{position:absolute;inset:0;background-image:radial-gradient(circle at 90% 10%,rgba(24,89,212,0.25) 0%,transparent 50%),radial-gradient(circle at 10% 90%,rgba(10,143,107,0.12) 0%,transparent 50%);pointer-events:none}
+.ql h2{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:800;color:#fff;letter-spacing:-0.025em;margin-bottom:14px;position:relative;z-index:1}
+.ql p{font-size:15px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:32px;position:relative;z-index:1}
+.ql-perks{display:flex;flex-direction:column;gap:13px;position:relative;z-index:1}
+.ql-perk{display:flex;align-items:center;gap:11px;font-size:14px;color:rgba(255,255,255,0.7)}
+.ql-perk svg{width:16px;height:16px;fill:var(--teal);flex-shrink:0}
+.qr{background:var(--white);padding:48px 44px}
+.qr h3{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:26px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.fg label{font-size:11.5px;font-weight:700;color:var(--slate);letter-spacing:0.06em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{
+  border:1.5px solid var(--border);border-radius:var(--r);
+  padding:10px 13px;font-family:'Instrument Sans',sans-serif;font-size:14px;color:var(--navy);
+  background:var(--white);transition:border-color 0.16s,box-shadow 0.16s;outline:none;width:100%;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(24,89,212,0.1)}
+.fg select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23718096' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:36px}
+.fg textarea{resize:vertical;min-height:82px}
+.submit-btn{
+  width:100%;padding:13px;border-radius:100px;background:var(--blue);
+  color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;
+  border:none;cursor:pointer;transition:all 0.18s;margin-top:4px;letter-spacing:-0.01em;
+}
+.submit-btn:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(24,89,212,0.3)}
+.form-ok{display:none;padding:40px 20px;text-align:center}
+.form-ok-ico{width:52px;height:52px;border-radius:50%;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.form-ok-ico svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.form-ok h4{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.form-ok p{font-size:14px;color:var(--slate)}
+
+/* ─── CONTACT ─── */
+.contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 2fr;gap:24px;margin-top:40px}
+.ccard{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px 28px;box-shadow:var(--sh)}
+.ccard h3{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:24px}
+.crow{display:flex;gap:14px;margin-bottom:20px}
+.cico{width:40px;height:40px;border-radius:10px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cico svg{width:18px;height:18px;fill:var(--blue)}
+.clabel{font-size:11px;font-weight:700;color:var(--slate-light);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:3px}
+.cval{font-size:13.5px;color:#2d3748;line-height:1.6}
+.cval a{color:var(--blue);transition:color 0.15s}
+.cval a:hover{color:var(--blue-dark)}
+.map-box{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh)}
+.map-box iframe{width:100%;height:380px;border:none;display:block}
+
+/* ─── FOOTER ─── */
+footer{background:var(--navy);color:rgba(255,255,255,0.5)}
+.footer-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding:64px 0 44px}
+.fbrand .flogo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.flogo-mark{width:32px;height:32px}
+.flogo-name{font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:800;color:#fff;letter-spacing:-0.02em}
+.fbrand p{font-size:13px;line-height:1.7;max-width:250px;margin-bottom:16px}
+.fiso{display:inline-flex;align-items:center;gap:7px;background:rgba(10,143,107,0.12);border:1px solid rgba(10,143,107,0.25);border-radius:6px;padding:7px 13px;font-size:11px;font-weight:700;color:rgba(74,222,128,0.9);letter-spacing:0.06em}
+.fcol h4{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol ul li a{font-size:13.5px;transition:color 0.15s}
+.fcol ul li a:hover{color:rgba(255,255,255,0.9)}
+.footer-bot{border-top:1px solid rgba(255,255,255,0.07);padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+
+/* ─── SCROLL REVEAL ─── */
+.sr{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
+.sr.d1{transition-delay:0.1s}
+.sr.d2{transition-delay:0.2s}
+.sr.d3{transition-delay:0.3s}
+.sr.vis{opacity:1;transform:none}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  .srv-grid{grid-template-columns:1fr 1fr}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .about-panel{order:-1}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .quote-grid{grid-template-columns:1fr}
+  .ql{padding:40px 32px}
+  .qr{padding:36px 28px}
+  .frow{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .nav-links,.nav-phone-wrap{display:none}
+  .ham{display:flex}
+  .srv-grid{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bot{flex-direction:column;gap:6px;text-align:center}
+  .section{padding:64px 0}
+  .hero{padding:110px 0 64px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <div class="nav-wrap">
+    <a href="#home" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 80 80" fill="none">
+        <path d="M40 6C40 6,14 36,14 52C14 66.36 25.64 78 40 78C54.36 78 66 66.36 66 52C66 36 40 6 40 6Z" fill="#1859d4"/>
+        <path d="M40 20C40 20,24 42,24 52C24 62.49 31.16 71 40 71C48.84 71 56 62.49 56 52C56 42 40 20 40 20Z" fill="#60a5fa" opacity="0.4"/>
+        <text x="27" y="61" font-family="'Bricolage Grotesque','Plus Jakarta Sans',sans-serif" font-weight="800" font-size="24" fill="white">N</text>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Nirmal Water Tech</span>
+        <span class="nav-logo-cert">ISO 9001:2015 Certified</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="nav-phone-wrap">
+        <div class="nav-phone-label">Call Us</div>
+        <div class="nav-phone-num">+91 99231 34736</div>
+      </div>
+      <a href="#quote" class="btn btn-blue btn-arrow">Get Quote</a>
+    </div>
+    <button class="ham" onclick="toggleMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mob-nav" id="mobNav">
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#industries" onclick="closeMob()">Industries</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="#quote" onclick="closeMob()" class="mob-cta btn">Get a Free Quote →</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg-shape"></div>
+  <div class="hero-bg-dots"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot">ISO 9001:2015</span>
+          Certified · Ambernath, Maharashtra
+        </div>
+        <h1 class="display">Water &amp; Wastewater<br><span>Treatment</span> Experts</h1>
+        <p class="hero-sub">Turnkey EPC solutions — from design to commissioning. Industrial RO Plants, ETP, STP, Water Softeners, and specialty chemicals for Maharashtra's industries.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-blue btn-arrow">Get a Free Quote</a>
+          <a href="#services" class="btn btn-outline">View Services</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            ISO Certified
+          </div>
+          <div class="hero-trust-sep"></div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6z"/></svg>
+            25+ Years Active
+          </div>
+          <div class="hero-trust-sep"></div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+            500+ Projects
+          </div>
+          <div class="hero-trust-sep"></div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            15+ Industries
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Card (visible on desktop) -->
+      <div class="hero-visual sr">
+        <div class="hero-main-card">
+          <div class="hero-card-accent"></div>
+          <div class="hero-logo-block">
+            <svg class="hero-logo-svg" viewBox="0 0 80 80" fill="none">
+              <path d="M40 6C40 6,14 36,14 52C14 66.36 25.64 78 40 78C54.36 78 66 66.36 66 52C66 36 40 6 40 6Z" fill="#1859d4"/>
+              <path d="M40 22C40 22,25 43,25 52C25 62.49 31.72 70 40 70C48.28 70 55 62.49 55 52C55 43 40 22 40 22Z" fill="#93c5fd" opacity="0.45"/>
+              <text x="27" y="61" font-family="'Bricolage Grotesque','sans-serif'" font-weight="800" font-size="24" fill="white">N</text>
+            </svg>
+            <div class="hero-brand-name">NIRMAL<br>WATER TECH</div>
+            <div class="hero-brand-tag">"Ultimate Solution Providers For Environment Protection"</div>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stats-row">
+            <div>
+              <div class="hstat-n">25<sup>+</sup></div>
+              <div class="hstat-l">Years</div>
+            </div>
+            <div>
+              <div class="hstat-n">500<sup>+</sup></div>
+              <div class="hstat-l">Projects</div>
+            </div>
+            <div>
+              <div class="hstat-n">15<sup>+</sup></div>
+              <div class="hstat-l">Industries</div>
+            </div>
+          </div>
+          <div class="hero-iso-strip">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <div>
+              <div class="hero-iso-text">ISO 9001:2015 Certified</div>
+              <div class="hero-iso-sub">International Quality Management</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo-float">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
+            <span>Add plant photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services section" id="services">
+  <div class="wrap">
+    <div class="sec-hd sr">
+      <div class="label">What we offer</div>
+      <h2 class="heading">Complete Water Treatment Systems</h2>
+      <p>Design, supply, erection and commissioning of water and wastewater treatment plants for industrial and commercial clients across Maharashtra.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv sr d1">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.13 0-1.9.16-2.53.33C14.28 12.14 16 8.73 17 8z"/></svg></div>
+        <h3>Industrial RO Plants</h3>
+        <p>High-capacity Reverse Osmosis systems for pharma, textiles, food & beverage, and heavy industries needing ultra-pure water.</p>
+        <a href="#quote" class="srv-more">Get a Quote →</a>
+      </div>
+      <div class="srv sr d2">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+        <h3>Effluent Treatment Plants</h3>
+        <p>ETP systems using physical, chemical and biological methods to treat industrial wastewater for full regulatory compliance.</p>
+        <a href="#quote" class="srv-more">Get a Quote →</a>
+      </div>
+      <div class="srv sr d3">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 17.93V18h-2v1.93A8 8 0 0 1 4.07 13H6v-2H4.07A8 8 0 0 1 11 4.07V6h2V4.07A8 8 0 0 1 19.93 11H18v2h1.93A8 8 0 0 1 13 19.93z"/></svg></div>
+        <h3>Sewage Treatment Plants</h3>
+        <p>SAFF, MBBR, MBR and Anaerobic Digester based STP solutions for hotels, hospitals, and housing societies.</p>
+        <a href="#quote" class="srv-more">Get a Quote →</a>
+      </div>
+      <div class="srv sr d1">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M19.5 12c0-1.23-.37-2.37-1-3.33V5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v1H10V5a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3.67C4.37 9.63 4 10.77 4 12s.37 2.37 1 3.33V19a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1h4v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3.67c.63-.96 1-2.1 1-3.33z"/></svg></div>
+        <h3>Water Softening Plants</h3>
+        <p>Ion exchange resin-based softeners to eliminate hardness from boiler feed, process water, and cooling tower systems.</p>
+        <a href="#quote" class="srv-more">Get a Quote →</a>
+      </div>
+      <div class="srv sr d2">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M13 2.05V4.05C17.39 4.59 20.5 8.58 19.96 12.97C19.5 16.61 16.64 19.5 13 19.93V21.93C18.5 21.38 22.5 16.5 21.95 11C21.5 6.25 17.73 2.5 13 2.05M11 2.06C9.05 2.25 7.19 3 5.67 4.26L7.1 5.74C8.22 4.84 9.57 4.26 11 4.06V2.06Z"/></svg></div>
+        <h3>DM / DI Water Plants</h3>
+        <p>Demineralization and deionization plants for boiler feed, pharmaceutical manufacturing, and precision processes.</p>
+        <a href="#quote" class="srv-more">Get a Quote →</a>
+      </div>
+      <div class="srv sr d3">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div>
+        <h3>O&amp;M Contracts &amp; Chemicals</h3>
+        <p>Operation &amp; Maintenance contracts, plant upgrades, and supply of boiler and cooling tower treatment chemicals.</p>
+        <a href="#quote" class="srv-more">Get a Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-left sr">
+        <div class="label">About the company</div>
+        <h2 class="heading">Built on Decades of Water Treatment Expertise</h2>
+        <p>Nirmal Water Tech is established to provide solutions in water &amp; wastewater treatment plants for industries facing rapid urbanization and industrialization. We handle the full lifecycle — from concept to commissioning.</p>
+        <div class="about-checks">
+          <div class="chk"><div class="chk-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Turnkey EPC — Engineering, Procurement &amp; Construction</div>
+          <div class="chk"><div class="chk-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Physical, chemical &amp; biological treatment methods</div>
+          <div class="chk"><div class="chk-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Supply of spares, chemicals &amp; ion exchange resins</div>
+          <div class="chk"><div class="chk-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Operation &amp; Maintenance contracts available</div>
+          <div class="chk"><div class="chk-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Analytical services &amp; water quality testing</div>
+        </div>
+        <a href="#quote" class="btn btn-blue btn-arrow">Request a Free Consultation</a>
+      </div>
+      <div class="about-panel sr d1">
+        <div class="about-panel-bg"></div>
+        <div class="ap-logo">
+          <svg class="ap-logo-svg" viewBox="0 0 80 80" fill="none" width="80" height="80">
+            <path d="M40 6C40 6,14 36,14 52C14 66.36 25.64 78 40 78C54.36 78 66 66.36 66 52C66 36 40 6 40 6Z" fill="#3b82f6"/>
+            <path d="M40 22C40 22,25 43,25 52C25 62.49 31.72 70 40 70C48.28 70 55 62.49 55 52C55 43 40 22 40 22Z" fill="#93c5fd" opacity="0.45"/>
+            <text x="27" y="61" font-family="'Bricolage Grotesque',sans-serif" font-weight="800" font-size="24" fill="white">N</text>
+          </svg>
+          <div class="ap-name">NIRMAL WATER TECH</div>
+          <div class="ap-tagline">"Ultimate Solution Providers For Environment Protection"</div>
+        </div>
+        <div class="ap-divider"></div>
+        <!-- Photo placeholders — swap with real <img> tags later -->
+        <div class="ap-photos">
+          <div class="ap-photo">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
+            <span>RO Plant Photo</span>
+          </div>
+          <div class="ap-photo">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
+            <span>ETP Plant Photo</span>
+          </div>
+          <div class="ap-photo">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
+            <span>STP Plant Photo</span>
+          </div>
+          <div class="ap-photo">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 14l-4-5.03L11 15l-2.5-3.01L5 17h14z"/></svg>
+            <span>Softener Photo</span>
+          </div>
+        </div>
+        <div class="ap-divider"></div>
+        <div class="ap-iso">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          ISO 9001:2015 Certified
+        </div>
+        <div class="ap-addr">
+          001, Shanti Villa CHS, B. Cabin Road<br>
+          Ambernath (East), Thane – 421501, Maharashtra
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRIES ═══ -->
+<section class="industries section-sm" id="industries">
+  <div class="wrap">
+    <div class="sr">
+      <div class="label">Industries served</div>
+      <h2 class="heading" style="font-size:clamp(26px,3.5vw,38px);color:var(--navy);margin-bottom:10px">Trusted Across Every Sector</h2>
+      <p style="font-size:16px;color:var(--slate);max-width:500px">Our water treatment systems serve the most demanding industrial environments across Maharashtra.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind sr"><span class="ind-dot"></span>Sugar &amp; Distillery</div>
+      <div class="ind sr d1"><span class="ind-dot"></span>Pharmaceuticals</div>
+      <div class="ind sr d2"><span class="ind-dot"></span>Textile &amp; Dyeing</div>
+      <div class="ind sr d3"><span class="ind-dot"></span>Steel &amp; Foundry</div>
+      <div class="ind sr"><span class="ind-dot"></span>Food, Dairy &amp; Refinery</div>
+      <div class="ind sr d1"><span class="ind-dot"></span>Engineering &amp; Automobile</div>
+      <div class="ind sr d2"><span class="ind-dot"></span>Hotels &amp; Hospitals</div>
+      <div class="ind sr d3"><span class="ind-dot"></span>Packaged Drinking Water</div>
+      <div class="ind sr"><span class="ind-dot"></span>Pulp &amp; Paper</div>
+      <div class="ind sr d1"><span class="ind-dot"></span>Bottling Plants</div>
+      <div class="ind sr d2"><span class="ind-dot"></span>Chemical Industries</div>
+      <div class="ind sr d3"><span class="ind-dot"></span>Minerals &amp; Mines</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="quote-sec section" id="quote">
+  <div class="wrap">
+    <div class="quote-wrap sr">
+      <div class="quote-grid">
+        <div class="ql">
+          <div class="ql-bg"></div>
+          <h2>Get a Free Technical Quote</h2>
+          <p>Tell us your requirement. Our engineers will respond within 24 hours with a tailored solution and transparent pricing.</p>
+          <div class="ql-perks">
+            <div class="ql-perk"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>Free site assessment &amp; needs analysis</div>
+            <div class="ql-perk"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>ISO 9001:2015 quality guaranteed</div>
+            <div class="ql-perk"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>Response within 24 hours</div>
+            <div class="ql-perk"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>No obligation, transparent pricing</div>
+          </div>
+        </div>
+        <div class="qr">
+          <h3>Request a Quote</h3>
+          <div id="qform">
+            <div class="frow">
+              <div class="fg"><label>Name *</label><input type="text" id="fn" placeholder="Full name" autocomplete="name"></div>
+              <div class="fg"><label>Company</label><input type="text" id="fc" placeholder="Company name" autocomplete="organization"></div>
+            </div>
+            <div class="frow">
+              <div class="fg"><label>Phone *</label><input type="tel" id="fp" placeholder="+91 XXXXX XXXXX" autocomplete="tel"></div>
+              <div class="fg"><label>Email</label><input type="email" id="fe" placeholder="you@company.com" autocomplete="email"></div>
+            </div>
+            <div class="fg">
+              <label>Service Required *</label>
+              <select id="fs">
+                <option value="">— Select a service —</option>
+                <option>Industrial RO Plant</option>
+                <option>Effluent Treatment Plant (ETP)</option>
+                <option>Sewage Treatment Plant (STP)</option>
+                <option>Water Softening Plant</option>
+                <option>DM / DI Water Plant</option>
+                <option>Cooling Tower / Boiler Chemicals</option>
+                <option>Operation &amp; Maintenance Contract</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Message</label>
+              <textarea id="fm" placeholder="Describe your requirement — capacity, industry type, location…"></textarea>
+            </div>
+            <button class="submit-btn" onclick="submitQuote()">Send Request →</button>
+          </div>
+          <div class="form-ok" id="formok">
+            <div class="form-ok-ico">
+              <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+            </div>
+            <h4>Request Received!</h4>
+            <p>Our team will contact you within 24 hours on the phone / email you provided.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact section-sm" id="contact">
+  <div class="wrap">
+    <div class="sr">
+      <div class="label">Find us</div>
+      <h2 class="heading" style="font-size:clamp(26px,3.5vw,38px);color:var(--navy);margin-bottom:6px">Visit or Contact Us</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="ccard sr">
+        <h3>Contact Details</h3>
+        <div class="crow">
+          <div class="cico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div>
+            <div class="clabel">Address</div>
+            <div class="cval">001, Shanti Villa CHS, Near Chandrasuman Mangal Karyalaya, B. Cabin Road, Ambernath (East), Thane – 421501</div>
+          </div>
+        </div>
+        <div class="crow">
+          <div class="cico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+          <div>
+            <div class="clabel">Phone</div>
+            <div class="cval">
+              <a href="tel:+917276081958">+91 72760 81958</a> (Office)<br>
+              <a href="tel:+919923134736">+91 99231 34736</a><br>
+              <a href="tel:+919324284736">+91 93242 84736</a>
+            </div>
+          </div>
+        </div>
+        <div class="crow">
+          <div class="cico"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg></div>
+          <div>
+            <div class="clabel">Email</div>
+            <div class="cval"><a href="mailto:nirmalwater@hotmail.com">nirmalwater@hotmail.com</a></div>
+          </div>
+        </div>
+        <a href="#quote" class="btn btn-blue btn-arrow" style="width:100%;justify-content:center;margin-top:4px">Get a Free Quote</a>
+      </div>
+      <div class="map-box sr d1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.5!2d73.19!3d19.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7954f0a7d7979%3A0x81f8a745b76dace2!2sAmbernath%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nirmal Water Tech Location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="fbrand">
+        <div class="flogo">
+          <svg class="flogo-mark" viewBox="0 0 80 80" fill="none" width="32" height="32">
+            <path d="M40 6C40 6,14 36,14 52C14 66.36 25.64 78 40 78C54.36 78 66 66.36 66 52C66 36 40 6 40 6Z" fill="#1859d4"/>
+            <text x="27" y="61" font-family="'Bricolage Grotesque',sans-serif" font-weight="800" font-size="24" fill="white">N</text>
+          </svg>
+          <span class="flogo-name">Nirmal Water Tech</span>
+        </div>
+        <p>Ultimate Solution Providers For Environment Protection. Turnkey water &amp; wastewater treatment for industries across Maharashtra.</p>
+        <div class="fiso">✓ ISO 9001:2015 Certified</div>
+      </div>
+      <div class="fcol">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Industrial RO Plants</a></li>
+          <li><a href="#services">ETP Plants</a></li>
+          <li><a href="#services">STP Plants</a></li>
+          <li><a href="#services">Water Softeners</a></li>
+          <li><a href="#services">DM / DI Plants</a></li>
+          <li><a href="#services">O&amp;M Contracts</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919923134736">+91 99231 34736</a></li>
+          <li><a href="tel:+919324284736">+91 93242 84736</a></li>
+          <li><a href="tel:+917276081958">+91 72760 81958</a></li>
+          <li><a href="mailto:nirmalwater@hotmail.com">nirmalwater@hotmail.com</a></li>
+          <li><a href="#contact">Ambernath (East), Thane</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2024 Nirmal Water Tech. All rights reserved.</span>
+      <span>Ambernath (East), Dist. Thane, Maharashtra – 421501</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll shadow
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('shadowed',scrollY>10);
+},{ passive:true });
+
+// Mobile nav
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
+function closeMob(){document.getElementById('mobNav').classList.remove('open')}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(!t)return;
+    e.preventDefault();
+    const offset=t.getBoundingClientRect().top+scrollY-72;
+    window.scrollTo({top:offset,behavior:'smooth'});
+    closeMob();
+  });
+});
+
+// Quote form
+function submitQuote(){
+  const n=document.getElementById('fn').value.trim();
+  const p=document.getElementById('fp').value.trim();
+  const s=document.getElementById('fs').value;
+  if(!n){alert('Please enter your name.');return}
+  if(!p){alert('Please enter your phone number.');return}
+  if(!s){alert('Please select a service.');return}
+  // TODO: replace with real API call to your backend / Resend
+  console.log('Quote submission:',{
+    name:n,company:document.getElementById('fc').value,
+    phone:p,email:document.getElementById('fe').value,
+    service:s,message:document.getElementById('fm').value
+  });
+  document.getElementById('qform').style.display='none';
+  document.getElementById('formok').style.display='block';
+}
+
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
