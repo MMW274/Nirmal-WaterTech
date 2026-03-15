@@ -669,7 +669,7 @@ footer{padding:44px 60px;border-top:1px solid var(--border);background:var(--nav
         <div class="cicon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div>
           <div class="clabel" data-i18n="contact.emailLabel">Email</div>
-          <div class="cval"><a href="mailto:nirmalwater@hotmail.com">nirmalwater@hotmail.com</a><br><a href="mailto:info@nirmalwater.com">info@nirmalwater.com</a></div>
+          <div class="cval"><a href="mailto:mmw9827@gmail.com">mmw9827@gmail.com</a></div>
         </div>
       </div>
       <div class="citem reveal" style="transition-delay:.2s">
@@ -682,16 +682,16 @@ footer{padding:44px 60px;border-top:1px solid var(--border);background:var(--nav
     </div>
     <form class="cform reveal" onsubmit="handleSubmit(event)" id="contactForm">
       <div class="frow">
-        <div class="fg"><label data-i18n="contact.fname">Your name</label><input type="text" data-i18n-placeholder="contact.phName" placeholder="Full name" required></div>
-        <div class="fg"><label data-i18n="contact.fcompany">Company</label><input type="text" data-i18n-placeholder="contact.phCompany" placeholder="Company name"></div>
+        <div class="fg"><label data-i18n="contact.fname">Your name</label><input type="text" name="name" data-i18n-placeholder="contact.phName" placeholder="Full name" required></div>
+        <div class="fg"><label data-i18n="contact.fcompany">Company</label><input type="text" name="company" data-i18n-placeholder="contact.phCompany" placeholder="Company name"></div>
       </div>
       <div class="frow">
-        <div class="fg"><label data-i18n="contact.femail">Email</label><input type="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required></div>
-        <div class="fg"><label data-i18n="contact.fphone">Phone</label><input type="tel" data-i18n-placeholder="contact.phPhone" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="fg"><label data-i18n="contact.femail">Email</label><input type="email" name="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required></div>
+        <div class="fg"><label data-i18n="contact.fphone">Phone</label><input type="tel" name="phone" data-i18n-placeholder="contact.phPhone" placeholder="+91 XXXXX XXXXX"></div>
       </div>
       <div class="fg">
         <label data-i18n="contact.fsystem">System of interest</label>
-        <select id="contactSelect">
+        <select id="contactSelect" name="service">
           <option value="" data-i18n="contact.phSelect">Select system type</option>
           <option value="ETP" data-i18n="contact.optEtp">Effluent Treatment Plant (ETP)</option>
           <option value="STP" data-i18n="contact.optStp">Sewage Treatment Plant (STP)</option>
@@ -704,8 +704,8 @@ footer{padding:44px 60px;border-top:1px solid var(--border);background:var(--nav
           <option value="Consultation" data-i18n="contact.optConsult">Not sure — need consultation</option>
         </select>
       </div>
-      <div class="fg"><label data-i18n="contact.fdetails">Project details</label><textarea data-i18n-placeholder="contact.phDetails" placeholder="Describe your industry, effluent type, and approximate daily volume (KLD/m³ per day)."></textarea></div>
-      <button type="submit" class="btn-p" style="align-self:flex-start;border:none;cursor:pointer" data-i18n="contact.submit">Send enquiry →</button>
+      <div class="fg"><label data-i18n="contact.fdetails">Project details</label><textarea name="message" data-i18n-placeholder="contact.phDetails" placeholder="Describe your industry, effluent type, and approximate daily volume (KLD/m³ per day)."></textarea></div>
+      <button type="submit" class="btn-p" id="submitBtn" style="align-self:flex-start;border:none;cursor:pointer" data-i18n="contact.submit">Send enquiry →</button>
     </form>
   </div>
 </section>
@@ -851,12 +851,55 @@ const statsEl = document.getElementById('stats');
 if (statsEl) statObs.observe(statsEl);
 
 // Form submit
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type=submit]');
-  btn.textContent = getT(currentLang, 'contact.sent');
-  btn.style.background = '#00856e';
+  const form = e.target;
+  const btn = document.getElementById('submitBtn');
+  const origText = btn.textContent;
+
+  btn.textContent = currentLang === 'de' ? 'Wird gesendet…' : 'Sending…';
   btn.disabled = true;
+  btn.style.opacity = '.6';
+
+  const payload = {
+    name: form.name.value.trim(),
+    company: form.company.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    service: form.service.value,
+    message: form.message.value.trim()
+  };
+
+  try {
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if (res.ok) {
+      btn.textContent = getT(currentLang, 'contact.sent');
+      btn.style.background = '#00856e';
+      btn.style.opacity = '1';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = origText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    btn.textContent = currentLang === 'de' ? 'Fehler — erneut versuchen' : 'Error — please retry';
+    btn.style.background = '#c0392b';
+    btn.style.opacity = '1';
+    setTimeout(() => {
+      btn.textContent = origText;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 3000);
+  }
 }
 </script>
 </body>
