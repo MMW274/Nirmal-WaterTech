@@ -30,10 +30,10 @@ nav.scrolled{padding:12px 60px}
 .nav-links a:hover{color:var(--white)}
 .nav-cta{font-size:12px;font-weight:500;padding:9px 20px;border:1px solid var(--teal);border-radius:3px;color:var(--teal);background:transparent;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
 .nav-cta:hover{background:var(--teal);color:var(--navy)}
-.lang-toggle{display:flex;align-items:center;gap:2px;margin-right:16px}
-.lang-btn{display:flex;align-items:center;gap:5px;background:none;border:none;cursor:pointer;font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--muted);padding:6px 10px;border-radius:2px;transition:color .2s,background .2s;font-family:var(--fb)}
-.lang-btn:hover{color:var(--white)}
-.lang-btn.active{color:var(--teal)}
+ .lang-toggle{display:flex;align-items:center;gap:2px;margin-right:16px;padding:2px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08)}
+ .lang-btn{display:flex;align-items:center;gap:5px;background:transparent;border:none;cursor:pointer;font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--muted);padding:6px 12px;border-radius:999px;transition:color .2s,background .2s,box-shadow .2s;font-family:var(--fb)}
+.lang-btn:hover{color:var(--white);background:rgba(255,255,255,0.04)}
+.lang-btn.active{color:var(--navy);background:var(--teal);box-shadow:0 0 0 1px var(--teal-glow),0 8px 18px rgba(0,194,160,0.45)}
 .lang-btn svg{width:20px;height:14px;flex-shrink:0;border-radius:1px;overflow:hidden}
 .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
 .hamburger span{display:block;width:22px;height:1.5px;background:var(--white)}
