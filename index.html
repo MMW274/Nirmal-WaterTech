@@ -3,1234 +3,768 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nirmal Water Tech — Zero Liquid Discharge & Water Treatment Systems</title>
-<meta name="description" content="India's trusted manufacturer of ETP, STP, ZLD and RO water treatment plants. Serving heavy industry across India and Europe since 2010.">
+<title>Nirmal Water Tech — Water & Wastewater Treatment Plants | Ambernath, India</title>
+<meta name="description" content="ISO 9001:2015 certified manufacturer of ETP, STP, ZLD, RO and water treatment plants. Turnkey SITC solutions for industry across India. Ambernath, Maharashtra.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --navy: #060d1a;
-    --navy-mid: #0c1a2e;
-    --navy-light: #132240;
-    --teal: #00c2a0;
-    --teal-dim: #00856e;
-    --teal-glow: rgba(0,194,160,0.15);
-    --white: #ffffff;
-    --off-white: #e8edf4;
-    --muted: #7a8fa8;
-    --border: rgba(255,255,255,0.08);
-    --border-teal: rgba(0,194,160,0.25);
-    --font-display: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--font-body);
-    background: var(--navy);
-    color: var(--white);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* ─── NAV ─────────────────────────────────────── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 60px;
-    background: rgba(6,13,26,0.7);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-    transition: padding 0.3s;
-  }
-  nav.scrolled { padding: 14px 60px; }
-
-  .nav-logo {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 20px;
-    color: var(--white);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-  .nav-logo span { color: var(--teal); }
-
-  .nav-links {
-    display: flex; gap: 36px; list-style: none;
-  }
-  .nav-links a {
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--white); }
-
-  .nav-cta {
-    font-family: var(--font-body);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 10px 22px;
-    border: 1px solid var(--teal);
-    border-radius: 4px;
-    color: var(--teal);
-    background: transparent;
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-  }
-  .nav-cta:hover { background: var(--teal); color: var(--navy); }
-
-  /* ─── HERO ────────────────────────────────────── */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 160px 60px 100px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-grid-bg {
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(0,194,160,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,194,160,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
-  }
-
-  .hero-glow {
-    position: absolute;
-    width: 700px; height: 700px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,194,160,0.12) 0%, transparent 70%);
-    top: -200px; right: -200px;
-    pointer-events: none;
-  }
-  .hero-glow-2 {
-    position: absolute;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,120,255,0.08) 0%, transparent 70%);
-    bottom: 0; left: 100px;
-    pointer-events: none;
-  }
-
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 28px;
-    opacity: 0; animation: fadeUp 0.7s 0.2s ease forwards;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block; width: 32px; height: 1px;
-    background: var(--teal);
-  }
-
-  .hero-headline {
-    font-family: var(--font-display);
-    font-size: clamp(48px, 7vw, 88px);
-    font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
-    max-width: 900px;
-    margin-bottom: 28px;
-    opacity: 0; animation: fadeUp 0.7s 0.35s ease forwards;
-  }
-  .hero-headline .accent { color: var(--teal); }
-
-  .hero-sub {
-    font-size: 18px;
-    font-weight: 300;
-    color: var(--muted);
-    max-width: 560px;
-    line-height: 1.7;
-    margin-bottom: 48px;
-    opacity: 0; animation: fadeUp 0.7s 0.5s ease forwards;
-  }
-
-  .hero-actions {
-    display: flex; gap: 16px; align-items: center;
-    flex-wrap: wrap;
-    opacity: 0; animation: fadeUp 0.7s 0.65s ease forwards;
-  }
-
-  .btn-primary {
-    font-family: var(--font-body);
-    font-size: 14px; font-weight: 500;
-    padding: 14px 32px;
-    background: var(--teal);
-    color: var(--navy);
-    border: none; border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    letter-spacing: 0.02em;
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,194,160,0.35); }
-
-  .btn-ghost {
-    font-family: var(--font-body);
-    font-size: 14px; font-weight: 400;
-    padding: 14px 32px;
-    background: transparent;
-    color: var(--off-white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .btn-ghost:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
-  .btn-ghost svg { transition: transform 0.2s; }
-  .btn-ghost:hover svg { transform: translateX(3px); }
-
-  /* ─── STATS BAR ───────────────────────────────── */
-  .stats-bar {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 48px 60px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-  }
-
-  .stat-item {
-    padding: 0 40px;
-    border-right: 1px solid var(--border);
-  }
-  .stat-item:first-child { padding-left: 0; }
-  .stat-item:last-child { border-right: none; }
-
-  .stat-num {
-    font-family: var(--font-display);
-    font-size: 52px;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    color: var(--white);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-num .unit { color: var(--teal); }
-
-  .stat-label {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  /* ─── SECTIONS ────────────────────────────────── */
-  section { padding: 120px 60px; }
-
-  .section-eyebrow {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 16px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-eyebrow::before {
-    content: ''; display: block;
-    width: 24px; height: 1px; background: var(--teal);
-  }
-
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(32px, 4vw, 52px);
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.1;
-    margin-bottom: 20px;
-  }
-
-  .section-lead {
-    font-size: 17px; font-weight: 300;
-    color: var(--muted);
-    max-width: 560px;
-    line-height: 1.7;
-  }
-
-  /* ─── INDUSTRIES ──────────────────────────────── */
-  .industries { background: var(--navy-mid); }
-
-  .industries-header {
-    display: flex; justify-content: space-between; align-items: flex-end;
-    margin-bottom: 64px;
-    flex-wrap: wrap; gap: 24px;
-  }
-
-  .industry-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-  }
-
-  .industry-card {
-    background: var(--navy-mid);
-    padding: 40px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  .industry-card::before {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--teal);
-    transform: scaleX(0);
-    transition: transform 0.3s;
-  }
-  .industry-card:hover { background: var(--navy-light); }
-  .industry-card:hover::before { transform: scaleX(1); }
-
-  .industry-num {
-    font-family: var(--font-display);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--teal);
-    margin-bottom: 24px;
-    opacity: 0.7;
-  }
-
-  .industry-icon {
-    width: 40px; height: 40px;
-    margin-bottom: 20px;
-    color: var(--teal);
-  }
-
-  .industry-name {
-    font-family: var(--font-display);
-    font-size: 20px; font-weight: 700;
-    letter-spacing: -0.01em;
-    margin-bottom: 10px;
-  }
-
-  .industry-desc {
-    font-size: 14px; font-weight: 300;
-    color: var(--muted);
-    line-height: 1.65;
-  }
-
-  /* ─── PRODUCTS ────────────────────────────────── */
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 64px;
-  }
-
-  .product-card {
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 40px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
-  }
-  .product-card:hover {
-    border-color: var(--border-teal);
-    transform: translateY(-4px);
-  }
-  .product-card::after {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--teal), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .product-card:hover::after { opacity: 1; }
-
-  .product-tag {
-    display: inline-block;
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--teal);
-    background: var(--teal-glow);
-    border: 1px solid var(--border-teal);
-    padding: 4px 12px;
-    border-radius: 2px;
-    margin-bottom: 20px;
-  }
-
-  .product-name {
-    font-family: var(--font-display);
-    font-size: 24px; font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 12px;
-  }
-
-  .product-desc {
-    font-size: 14px; font-weight: 300;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 28px;
-  }
-
-  .product-specs {
-    display: flex; gap: 24px; flex-wrap: wrap;
-    border-top: 1px solid var(--border);
-    padding-top: 24px;
-    margin-bottom: 28px;
-  }
-
-  .spec-item { }
-  .spec-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-  .spec-val { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--white); }
-
-  .product-link {
-    font-size: 13px; font-weight: 500;
-    color: var(--teal);
-    text-decoration: none;
-    display: flex; align-items: center; gap: 6px;
-    letter-spacing: 0.04em;
-    transition: gap 0.2s;
-  }
-  .product-link:hover { gap: 10px; }
-
-  /* ─── ZLD FEATURE ─────────────────────────────── */
-  .zld-section {
-    background: var(--navy-mid);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .zld-content {
-    padding: 120px 80px 120px 60px;
-  }
-
-  .zld-visual {
-    background: var(--navy-light);
-    border-left: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 60px;
-    position: relative;
-  }
-
-  .zld-diagram {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .zld-flow {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-  }
-
-  .flow-step {
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    padding: 20px 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    position: relative;
-    transition: border-color 0.3s;
-  }
-  .flow-step:hover { border-color: var(--border-teal); }
-  .flow-step + .flow-step { margin-top: -1px; }
-
-  .flow-step-num {
-    font-family: var(--font-display);
-    font-size: 10px; font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--teal);
-    min-width: 24px;
-  }
-
-  .flow-step-name {
-    font-size: 14px; font-weight: 500;
-    color: var(--white);
-    flex: 1;
-  }
-
-  .flow-step-arrow {
-    color: var(--teal);
-    font-size: 16px;
-  }
-
-  .flow-connector {
-    width: 2px; height: 20px;
-    background: linear-gradient(to bottom, var(--teal), rgba(0,194,160,0.3));
-    margin-left: 35px;
-  }
-
-  .zld-recovery {
-    display: flex; align-items: center; gap: 16px;
-    margin-top: 32px;
-    padding: 20px 24px;
-    background: var(--teal-glow);
-    border: 1px solid var(--border-teal);
-  }
-  .recovery-num {
-    font-family: var(--font-display);
-    font-size: 40px; font-weight: 800;
-    color: var(--teal);
-    letter-spacing: -0.03em;
-    line-height: 1;
-  }
-  .recovery-text { font-size: 13px; color: var(--muted); line-height: 1.5; }
-
-  /* ─── CERTIFICATIONS ──────────────────────────── */
-  .certs { padding: 80px 60px; border-top: 1px solid var(--border); }
-  .certs-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 32px;
-  }
-  .certs-label {
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-  .cert-badges {
-    display: flex; gap: 16px; flex-wrap: wrap;
-  }
-  .cert-badge {
-    display: flex; align-items: center; gap: 8px;
-    padding: 10px 18px;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.06em;
-    color: var(--off-white);
-    background: var(--navy-mid);
-  }
-  .cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
-
-  /* ─── GLOBAL REACH ────────────────────────────── */
-  .global-section { background: var(--navy); }
-  .global-inner {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-    align-items: center; margin-top: 64px;
-  }
-
-  .global-text-block {
-    padding: 32px;
-    border-left: 2px solid var(--teal);
-    background: var(--navy-mid);
-    margin-bottom: 16px;
-  }
-  .global-text-block p { font-size: 15px; font-weight: 300; color: var(--off-white); line-height: 1.7; }
-  .global-text-block strong { font-weight: 500; color: var(--white); }
-
-  .reach-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-  }
-  .reach-item {
-    padding: 24px;
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-  }
-  .reach-country {
-    font-family: var(--font-display);
-    font-size: 16px; font-weight: 700;
-    margin-bottom: 4px;
-  }
-  .reach-detail { font-size: 12px; color: var(--muted); }
-
-  /* ─── CONTACT ─────────────────────────────────── */
-  .contact-section {
-    background: var(--navy-mid);
-    border-top: 1px solid var(--border);
-  }
-
-  .contact-inner {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-    margin-top: 64px;
-  }
-
-  .contact-info { }
-  .contact-item {
-    display: flex; gap: 16px; align-items: flex-start;
-    margin-bottom: 28px;
-  }
-  .contact-icon {
-    width: 40px; height: 40px;
-    background: var(--navy-light);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    color: var(--teal);
-  }
-  .contact-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-  .contact-value { font-size: 15px; font-weight: 400; color: var(--white); }
-
-  .contact-form { display: flex; flex-direction: column; gap: 14px; }
-
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-
-  .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    background: var(--navy-light);
-    border: 1px solid var(--border);
-    color: var(--white);
-    font-family: var(--font-body);
-    font-size: 14px;
-    padding: 12px 16px;
-    border-radius: 2px;
-    outline: none;
-    transition: border-color 0.2s;
-    appearance: none;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus { border-color: var(--teal); }
-  .form-group input::placeholder,
-  .form-group textarea::placeholder { color: rgba(122,143,168,0.5); }
-  .form-group select option { background: var(--navy-mid); }
-  .form-group textarea { resize: vertical; min-height: 100px; }
-
-  /* ─── FOOTER ──────────────────────────────────── */
-  footer {
-    padding: 60px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .footer-logo {
-    font-family: var(--font-display);
-    font-weight: 800; font-size: 18px;
-    color: var(--white); letter-spacing: -0.02em;
-  }
-  .footer-logo span { color: var(--teal); }
-
-  .footer-links {
-    display: flex; gap: 28px; list-style: none;
-  }
-  .footer-links a {
-    font-size: 12px; font-weight: 400;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--white); }
-
-  .footer-right {
-    font-size: 12px; color: var(--muted);
-  }
-
-  /* ─── ANIMATIONS ──────────────────────────────── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* ─── MOBILE NAV ──────────────────────────────── */
-  .hamburger {
-    display: none;
-    background: none; border: none;
-    cursor: pointer; padding: 4px;
-    color: var(--white);
-    flex-direction: column; gap: 5px;
-  }
-  .hamburger span {
-    display: block; width: 24px; height: 1.5px;
-    background: var(--white);
-    transition: all 0.25s;
-  }
-
-  /* ─── RESPONSIVE ──────────────────────────────── */
-  @media (max-width: 1024px) {
-    nav { padding: 16px 32px; }
-    .hero { padding: 140px 32px 80px; }
-    .stats-bar { padding: 40px 32px; }
-    section { padding: 80px 32px; }
-    .zld-section { grid-template-columns: 1fr; }
-    .zld-content { padding: 80px 32px; }
-    .zld-visual { padding: 60px 32px; border-left: none; border-top: 1px solid var(--border); }
-    .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-    .global-inner { grid-template-columns: 1fr; gap: 48px; }
-    footer { padding: 40px 32px; }
-    .certs { padding: 60px 32px; }
-  }
-
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    nav { padding: 16px 24px; }
-    nav.menu-open .nav-links {
-      display: flex; flex-direction: column;
-      position: fixed; inset: 0; top: 61px;
-      background: var(--navy);
-      padding: 32px 24px;
-      gap: 24px; z-index: 99;
-      border-top: 1px solid var(--border);
-    }
-    nav.menu-open .nav-links a { font-size: 18px; }
-    .hero { padding: 120px 24px 60px; }
-    .hero-headline { font-size: 42px; }
-    .hero-sub { font-size: 16px; }
-    .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 40px 24px; gap: 32px; }
-    .stat-item { padding: 0 20px; }
-    .stat-num { font-size: 38px; }
-    section { padding: 60px 24px; }
-    .industry-grid { grid-template-columns: 1fr; }
-    .products-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .reach-grid { grid-template-columns: 1fr; }
-    footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
-    .footer-links { flex-wrap: wrap; gap: 16px; }
-    .certs { padding: 48px 24px; }
-    .industries-header { flex-direction: column; align-items: flex-start; }
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#060d1a;--navy-mid:#0c1a2e;--navy-light:#132240;
+  --teal:#00c2a0;--teal-dim:#00856e;--teal-glow:rgba(0,194,160,0.12);
+  --white:#fff;--off-white:#e8edf4;--muted:#7a8fa8;
+  --border:rgba(255,255,255,0.08);--border-teal:rgba(0,194,160,0.25);
+  --fd:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(6,13,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:padding .3s}
+nav.scrolled{padding:12px 60px}
+.nav-logo{font-family:var(--fd);font-weight:800;font-size:19px;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.nav-logo em{color:var(--teal);font-style:normal}
+.iso-badge{font-size:9px;font-weight:500;letter-spacing:.07em;color:var(--teal);border:1px solid var(--border-teal);padding:2px 6px;border-radius:2px;font-family:var(--fb)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{font-size:12px;font-weight:500;padding:9px 20px;border:1px solid var(--teal);border-radius:3px;color:var(--teal);background:transparent;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--teal);color:var(--navy)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--white)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:160px 60px 100px;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,160,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,160,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 80%);pointer-events:none}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,194,160,.1) 0%,transparent 70%);top:-200px;right:-150px;pointer-events:none}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,100,255,.06) 0%,transparent 70%);bottom:-100px;left:80px;pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:26px;opacity:0;animation:fadeUp .7s .2s ease forwards}
+.eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--teal)}
+h1{font-family:var(--fd);font-size:clamp(42px,6.5vw,84px);font-weight:800;line-height:1;letter-spacing:-.03em;max-width:860px;margin-bottom:26px;opacity:0;animation:fadeUp .7s .35s ease forwards}
+h1 .ac{color:var(--teal)}
+.hero-sub{font-size:17px;font-weight:300;color:var(--muted);max-width:540px;line-height:1.75;margin-bottom:44px;opacity:0;animation:fadeUp .7s .5s ease forwards}
+.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .65s ease forwards}
+.btn-p{font-family:var(--fb);font-size:13px;font-weight:500;padding:13px 28px;background:var(--teal);color:var(--navy);border:none;border-radius:3px;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s;letter-spacing:.02em;display:inline-block}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,194,160,.32)}
+.btn-g{font-family:var(--fb);font-size:13px;font-weight:400;padding:13px 28px;background:transparent;color:var(--off-white);border:1px solid var(--border);border-radius:3px;text-decoration:none;cursor:pointer;transition:border-color .2s;display:flex;align-items:center;gap:7px}
+.btn-g:hover{border-color:rgba(255,255,255,.3);color:var(--white)}
+.btn-g svg{transition:transform .2s}
+.btn-g:hover svg{transform:translateX(3px)}
+
+/* TRUST BAR */
+.trust-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 60px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;background:var(--navy-mid)}
+.trust-label{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.trust-badges{display:flex;gap:9px;flex-wrap:wrap}
+.tbadge{display:flex;align-items:center;gap:6px;padding:6px 13px;border:1px solid var(--border);border-radius:2px;font-size:11px;font-weight:500;color:var(--off-white);background:var(--navy-light)}
+.tbadge .dot{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0}
+
+/* STATS */
+.stats-section{padding:80px 60px;background:var(--navy)}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border)}
+.stat-card{padding:48px 40px;border-right:1px solid var(--border);position:relative;overflow:hidden;transition:background .3s}
+.stat-card:last-child{border-right:none}
+.stat-card:hover{background:var(--navy-mid)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent);opacity:0;transition:opacity .3s}
+.stat-card:hover::before{opacity:1}
+.stat-num{font-family:var(--fd);font-size:58px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--white);margin-bottom:8px}
+.stat-num .su{color:var(--teal)}
+.stat-label{font-size:12px;font-weight:400;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}
+
+/* SECTIONS */
+section{padding:100px 60px}
+.sec-eyebrow{font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.sec-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+h2{font-family:var(--fd);font-size:clamp(26px,3.4vw,46px);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin-bottom:14px}
+.sec-lead{font-size:15px;font-weight:300;color:var(--muted);max-width:520px;line-height:1.75}
+
+/* ABOUT */
+.about{background:var(--navy-mid)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:52px}
+.about-quote{border-left:2px solid var(--teal);padding:20px 24px;background:var(--navy-light);margin-bottom:20px}
+.about-quote p{font-size:15px;font-weight:300;color:var(--off-white);line-height:1.8;font-style:italic}
+.about-body{font-size:14px;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:13px}
+.pillars{display:flex;flex-direction:column;gap:9px}
+.pillar{padding:18px 20px;background:var(--navy-light);border:1px solid var(--border);border-radius:2px;transition:border-color .2s}
+.pillar:hover{border-color:var(--border-teal)}
+.pillar-t{font-family:var(--fd);font-size:14px;font-weight:700;margin-bottom:4px}
+.pillar-d{font-size:12px;font-weight:300;color:var(--muted);line-height:1.6}
+
+/* INDUSTRIES */
+.ind-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:18px}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ind-card{border-radius:4px;overflow:hidden;position:relative;cursor:pointer;height:220px;background:var(--navy-light)}
+.ind-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s,filter .3s;filter:brightness(.45) saturate(.7)}
+.ind-card:hover .ind-img{transform:scale(1.05);filter:brightness(.35) saturate(.8)}
+.ind-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,13,26,.95) 0%,rgba(6,13,26,.3) 60%,transparent 100%)}
+.ind-content{position:absolute;bottom:0;left:0;right:0;padding:22px}
+.ind-num{font-size:9px;font-weight:700;letter-spacing:.15em;color:var(--teal);margin-bottom:6px;opacity:.8}
+.ind-name{font-family:var(--fd);font-size:16px;font-weight:700;line-height:1.2;margin-bottom:5px}
+.ind-desc{font-size:11px;font-weight:300;color:rgba(232,237,244,.7);line-height:1.5;max-height:0;overflow:hidden;transition:max-height .3s,opacity .3s;opacity:0}
+.ind-card:hover .ind-desc{max-height:80px;opacity:1}
+.ind-teal-bar{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.ind-card:hover .ind-teal-bar{transform:scaleX(1)}
+
+/* PRODUCTS */
+.products{background:var(--navy-mid)}
+.prod-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:18px}
+.prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.prod-card{background:var(--navy);border:1px solid var(--border);border-radius:2px;padding:30px;transition:border-color .3s,transform .25s;position:relative;overflow:hidden}
+.prod-card:hover{border-color:var(--border-teal);transform:translateY(-3px)}
+.prod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent);opacity:0;transition:opacity .3s}
+.prod-card:hover::before{opacity:1}
+.prod-tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--teal);background:var(--teal-glow);border:1px solid var(--border-teal);padding:3px 9px;border-radius:2px;margin-bottom:14px}
+.prod-name{font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:-.02em;margin-bottom:9px}
+.prod-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.prod-feats{list-style:none;border-top:1px solid var(--border);padding-top:16px;margin-bottom:18px;display:flex;flex-direction:column;gap:6px}
+.prod-feats li{font-size:12px;font-weight:300;color:var(--off-white);display:flex;align-items:flex-start;gap:7px}
+.prod-feats li::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--teal);margin-top:7px;flex-shrink:0}
+.prod-link{font-size:12px;font-weight:500;color:var(--teal);text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .2s}
+.prod-link:hover{gap:9px}
+
+/* ZLD */
+.zld-wrap{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.zld-left{padding:90px 64px 90px 60px}
+.zld-right{background:var(--navy-mid);border-left:1px solid var(--border);display:flex;align-items:center;justify-content:center;padding:60px 48px}
+.zld-flow{display:flex;flex-direction:column;width:100%;max-width:340px}
+.fstep{background:var(--navy);border:1px solid var(--border);padding:15px 17px;display:flex;align-items:center;gap:11px;transition:border-color .2s}
+.fstep+.fstep{margin-top:-1px}
+.fstep:hover{border-color:var(--border-teal)}
+.fnum{font-size:9px;font-weight:700;letter-spacing:.13em;color:var(--teal);min-width:18px}
+.fname{font-size:13px;font-weight:400;color:var(--white);flex:1}
+.farr{color:var(--teal);font-size:12px}
+.fconn{width:2px;height:13px;background:linear-gradient(to bottom,var(--teal),rgba(0,194,160,.15));margin-left:26px}
+.zld-note{margin-top:18px;padding:15px 17px;background:var(--teal-glow);border:1px solid var(--border-teal);font-size:12px;font-weight:300;color:var(--off-white);line-height:1.6}
+.zld-note strong{color:var(--teal);font-weight:500}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:48px}
+.svc-card{padding:26px;background:var(--navy-mid);border:1px solid var(--border);border-radius:2px;transition:border-color .2s}
+.svc-card:hover{border-color:var(--border-teal)}
+.svc-icon{width:28px;height:28px;margin-bottom:12px;color:var(--teal)}
+.svc-name{font-family:var(--fd);font-size:15px;font-weight:700;margin-bottom:7px}
+.svc-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.65}
+
+/* CHEMICALS */
+.chem-bg{background:var(--navy-mid)}
+.chem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.chem-card{background:var(--navy);border:1px solid var(--border);border-radius:2px;padding:24px;transition:border-color .2s}
+.chem-card:hover{border-color:var(--border-teal)}
+.chem-title{font-family:var(--fd);font-size:14px;font-weight:700;margin-bottom:12px}
+.chem-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.chem-list li{font-size:12px;font-weight:300;color:var(--muted);display:flex;align-items:flex-start;gap:7px}
+.chem-list li::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--teal);margin-top:6px;flex-shrink:0}
+
+/* CLIENTS */
+.clients-bg{background:var(--navy)}
+.clients-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:18px}
+.clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.client-cell{background:var(--navy-mid);padding:28px 20px;display:flex;align-items:center;justify-content:center;min-height:90px;transition:background .2s}
+.client-cell:hover{background:var(--navy-light)}
+.client-name{font-family:var(--fd);font-size:13px;font-weight:700;color:var(--muted);text-align:center;line-height:1.3;transition:color .2s;letter-spacing:.01em}
+.client-cell:hover .client-name{color:var(--white)}
+
+/* CONTACT */
+.contact-bg{background:var(--navy-mid)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px}
+.citem{display:flex;gap:13px;align-items:flex-start;margin-bottom:20px}
+.cicon{width:34px;height:34px;background:var(--navy-light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--teal)}
+.clabel{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;margin-bottom:3px}
+.cval{font-size:13px;color:var(--white);line-height:1.6}
+.cval a{color:var(--teal);text-decoration:none}
+.cval a:hover{text-decoration:underline}
+.cform{display:flex;flex-direction:column;gap:11px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:10px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select,.fg textarea{background:var(--navy-light);border:1px solid var(--border);color:var(--white);font-family:var(--fb);font-size:13px;padding:10px 13px;border-radius:2px;outline:none;transition:border-color .2s;appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal)}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(122,143,168,.4)}
+.fg select option{background:var(--navy-mid)}
+.fg textarea{resize:vertical;min-height:90px}
+
+/* FOOTER */
+footer{padding:44px 60px;border-top:1px solid var(--border);background:var(--navy)}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;margin-bottom:28px}
+.ft-logo{font-family:var(--fd);font-weight:800;font-size:18px;color:var(--white)}
+.ft-logo em{color:var(--teal);font-style:normal}
+.ft-tag{font-size:11px;font-weight:300;color:var(--muted);margin-top:5px;line-height:1.6}
+.ft-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap;align-items:center}
+.ft-links a{font-size:10px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.ft-links a:hover{color:var(--white)}
+.ft-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--muted)}
+
+/* REVEAL */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* counter up animation via JS — no extra CSS needed */
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  nav{padding:15px 28px}nav.scrolled{padding:11px 28px}
+  .hero{padding:130px 28px 80px}.trust-bar{padding:20px 28px}
+  section{padding:72px 28px}.stats-section{padding:60px 28px}
+  .about-inner{grid-template-columns:1fr;gap:36px}
+  .zld-wrap{grid-template-columns:1fr}.zld-left{padding:72px 28px}
+  .zld-right{padding:48px 28px;border-left:none;border-top:1px solid var(--border)}
+  .contact-inner{grid-template-columns:1fr;gap:40px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-card:nth-child(2){border-right:none}.stat-card:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border)}
+  footer{padding:36px 28px}
+}
+@media(max-width:768px){
+  nav{padding:13px 18px}.nav-links,.nav-cta{display:none}.hamburger{display:flex}
+  nav.menu-open .nav-links{display:flex;flex-direction:column;position:fixed;inset:0;top:53px;background:var(--navy);padding:24px 18px;gap:18px;z-index:99;border-top:1px solid var(--border)}
+  nav.menu-open .nav-links a{font-size:16px}
+  .hero{padding:108px 18px 56px}h1{font-size:36px}.hero-sub{font-size:15px}
+  .trust-bar{padding:16px 18px;gap:14px}section{padding:52px 18px}.stats-section{padding:48px 18px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}.stat-num{font-size:42px}
+  .ind-grid{grid-template-columns:1fr 1fr}.prod-grid,.svc-grid,.chem-grid{grid-template-columns:1fr}
+  .clients-grid{grid-template-columns:repeat(3,1fr)}.frow{grid-template-columns:1fr}
+  footer{padding:28px 18px}.ft-top{flex-direction:column}.ft-bottom{flex-direction:column}
+}
+@media(max-width:480px){
+  .ind-grid{grid-template-columns:1fr}.clients-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-inner{grid-template-columns:1fr}.stat-card{border-right:none !important;border-bottom:1px solid var(--border)}
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="#" class="nav-logo">Nirmal<span>.</span></a>
+  <a href="#" class="nav-logo">Nirmal<em>.</em><span class="iso-badge">ISO 9001:2015</span></a>
   <ul class="nav-links">
+    <li><a href="#about">About</a></li>
     <li><a href="#industries">Industries</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#zld">ZLD</a></li>
-    <li><a href="#global">Global</a></li>
+    <li><a href="#clients">Clients</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Request Quote</a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="#contact" class="nav-cta">Get a Quote</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-grid-bg"></div>
+  <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-
-  <div class="hero-eyebrow">Ambernath, India — Est. 2010</div>
-
-  <h1 class="hero-headline">
-    Industrial water.<br>
-    <span class="accent">Zero waste.</span><br>
-    Zero compromise.
-  </h1>
-
-  <p class="hero-sub">
-    We design, manufacture, and commission ETP, STP, ZLD, and RO systems for heavy industry across India and Europe. When wastewater regulations tighten, we already have the answer.
-  </p>
-
+  <div class="hero-glow2"></div>
+  <div class="eyebrow">Ambernath, Maharashtra — More than a decade of expertise</div>
+  <h1>Water treatment.<br><span class="ac">Environment</span><br>protection.</h1>
+  <p class="hero-sub">Nirmal Water Tech designs, manufactures, and commissions water and wastewater treatment plants for industrial and institutional clients across India. Turnkey SITC solutions — from ETP and STP to Zero Liquid Discharge.</p>
   <div class="hero-actions">
-    <a href="#products" class="btn-primary">Explore our systems</a>
-    <a href="#zld" class="btn-ghost">
-      How ZLD works
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+    <a href="#products" class="btn-p">Explore our systems</a>
+    <a href="#contact" class="btn-g">Request a quote <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar" id="stats">
-  <div class="stat-item reveal">
-    <div class="stat-num"><span class="counter" data-target="250">0</span><span class="unit">+</span></div>
-    <div class="stat-label">Plants installed</div>
-  </div>
-  <div class="stat-item reveal" style="transition-delay:0.1s">
-    <div class="stat-num"><span class="counter" data-target="15">0</span><span class="unit">+</span></div>
-    <div class="stat-label">Industries served</div>
-  </div>
-  <div class="stat-item reveal" style="transition-delay:0.2s">
-    <div class="stat-num"><span class="counter" data-target="99">0</span><span class="unit">%</span></div>
-    <div class="stat-label">Water recovery (ZLD)</div>
-  </div>
-  <div class="stat-item reveal" style="transition-delay:0.3s">
-    <div class="stat-num"><span class="counter" data-target="14">0</span><span class="unit">+</span></div>
-    <div class="stat-label">Years of expertise</div>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="trust-label">Credentials</span>
+  <div class="trust-badges">
+    <div class="tbadge"><span class="dot"></span>ISO 9001:2015 Certified</div>
+    <div class="tbadge"><span class="dot"></span>Pollution Control Board Compliant</div>
+    <div class="tbadge"><span class="dot"></span>EC / Environment Clearance Experts</div>
+    <div class="tbadge"><span class="dot"></span>Turnkey SITC Contractor</div>
+    <div class="tbadge"><span class="dot"></span>O&amp;M Services Available</div>
   </div>
 </div>
 
-<!-- INDUSTRIES -->
-<section class="industries" id="industries">
-  <div class="industries-header">
-    <div>
-      <div class="section-eyebrow reveal">Industries we serve</div>
-      <h2 class="section-title reveal">Built for your<br>industry's demands</h2>
+<!-- STATS -->
+<div class="stats-section" id="stats">
+  <div class="stats-inner">
+    <div class="stat-card reveal">
+      <div class="stat-num"><span class="counter" data-target="100">0</span><span class="su">+</span></div>
+      <div class="stat-label">Projects Done</div>
     </div>
-    <p class="section-lead reveal" style="max-width:360px">
-      Every sector generates a different effluent profile. We engineer to match it precisely.
-    </p>
+    <div class="stat-card reveal" style="transition-delay:.1s">
+      <div class="stat-num"><span class="counter" data-target="300">0</span><span class="su">+</span></div>
+      <div class="stat-label">Plants Installations</div>
+    </div>
+    <div class="stat-card reveal" style="transition-delay:.2s">
+      <div class="stat-num"><span class="counter" data-target="100">0</span><span class="su">+</span></div>
+      <div class="stat-label">Satisfied Customers</div>
+    </div>
+    <div class="stat-card reveal" style="transition-delay:.3s">
+      <div class="stat-num"><span class="counter" data-target="50">0</span><span class="su">+</span></div>
+      <div class="stat-label">Dedicated Staff</div>
+    </div>
   </div>
+</div>
 
-  <div class="industry-grid">
-    <div class="industry-card reveal">
-      <div class="industry-num">01</div>
-      <svg class="industry-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M8 32V20l6-8 6 4 6-8 6 6v18H8z"/>
-        <path d="M15 32v-8h5v8M24 32v-6h5v6"/>
-      </svg>
-      <div class="industry-name">Textiles & Dyeing</div>
-      <div class="industry-desc">High-colour, high-TDS effluent treatment. Our ETP systems handle reactive dyes, heavy metals, and COD loads typical of Indian textile clusters.</div>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="sec-eyebrow reveal">Who we are</div>
+  <h2 class="reveal">Ultimate solution providers<br>for environment protection</h2>
+  <div class="about-inner">
+    <div>
+      <div class="about-quote reveal">
+        <p>"Providing value to customers is our main objective. We strive to build our market leadership in water and wastewater treatment, and contribute to cleaner and greener environments."</p>
+      </div>
+      <p class="about-body reveal" style="transition-delay:.1s">Nirmal Water Tech is established to provide solutions in water and wastewater treatment plants and services. We are in the business of design, supply, erection, and commissioning of water and wastewater treatment plants — inclusive of physical, chemical, and biological methods — for handling wastewater from various industries and domestic drinking water.</p>
+      <p class="about-body reveal" style="transition-delay:.18s">We provide turnkey solutions including Engineering, Procurement &amp; Construction of water treatment plants for industrial and institutional applications: Softeners, DM/DI plants, Filtration, RO, MBR, MBBR, UV purifiers, Ozonators, and the complete range of Effluent and Sewage Treatment Plants. Upgradation and augmentation of existing plants is our proven speciality.</p>
+      <p class="about-body reveal" style="transition-delay:.24s">Our experts carry rich experience in EC (Environment Clearance) — a critical requirement under Central and State Government guidelines — covering Design and Drawing services for WTPs and STPs.</p>
     </div>
-    <div class="industry-card reveal" style="transition-delay:0.1s">
-      <div class="industry-num">02</div>
-      <svg class="industry-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-        <rect x="8" y="12" width="24" height="18" rx="2"/>
-        <path d="M14 12V8h12v4M20 20v4M16 22h8"/>
-      </svg>
-      <div class="industry-name">Pharmaceutical</div>
-      <div class="industry-desc">Meeting CPCB and EU standards for pharmaceutical wastewater. ZLD systems ensuring zero discharge for API and formulation plants.</div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="pillar-t">Design &amp; Engineering</div><div class="pillar-d">We conceptualise, design, develop, and manufacture the complete range of water and wastewater treatment plants with allied equipment.</div></div>
+      <div class="pillar reveal" style="transition-delay:.1s"><div class="pillar-t">Turnkey SITC</div><div class="pillar-d">Supply, Installation, Testing, and Commissioning across the nation. One team handles the full project from site survey to handover.</div></div>
+      <div class="pillar reveal" style="transition-delay:.2s"><div class="pillar-t">Retrofitting &amp; Augmentation</div><div class="pillar-d">Upgrading existing plants to current Pollution Control Board norms is our proven identity, built over many years of industrial work.</div></div>
+      <div class="pillar reveal" style="transition-delay:.3s"><div class="pillar-t">Spares &amp; Consumables</div><div class="pillar-d">We also supply water treatment plant spares, consumables, chemicals, and ion exchange resins.</div></div>
     </div>
-    <div class="industry-card reveal" style="transition-delay:0.2s">
-      <div class="industry-num">03</div>
-      <svg class="industry-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M20 6C13 6 8 12 8 20s5 14 12 14 12-6 12-14S27 6 20 6z"/>
-        <path d="M20 12v8l5 5"/>
-      </svg>
-      <div class="industry-name">Chemical & Petrochemical</div>
-      <div class="industry-desc">Complex multi-stream treatment for chemical plants. Our systems handle variable pH, solvent traces, and complex ion chemistry.</div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="ind-header">
+    <div>
+      <div class="sec-eyebrow reveal">Industries we serve</div>
+      <h2 class="reveal">Built for your<br>industry's effluent</h2>
     </div>
-    <div class="industry-card reveal" style="transition-delay:0.1s">
-      <div class="industry-num">04</div>
-      <svg class="industry-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M10 28l4-12 4 6 4-10 4 8 4-4"/>
-        <path d="M8 32h24"/>
-      </svg>
-      <div class="industry-name">Food & Beverage</div>
-      <div class="industry-desc">High-BOD/COD wastewater from food processing. Biological treatment systems designed for sugar, dairy, and beverage facilities.</div>
+    <p class="sec-lead reveal" style="font-size:14px;max-width:300px">Every sector generates different wastewater. We engineer systems to match it precisely.</p>
+  </div>
+  <div class="ind-grid">
+
+    <div class="ind-card reveal">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&auto=format" alt="Sugar and Distillery" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">01</div>
+        <div class="ind-name">Sugar &amp; Distillery</div>
+        <div class="ind-desc">High-BOD, high-colour effluent treatment for sugar mills and distilleries.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
     </div>
-    <div class="industry-card reveal" style="transition-delay:0.2s">
-      <div class="industry-num">05</div>
-      <svg class="industry-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-        <rect x="8" y="8" width="10" height="24" rx="1"/>
-        <rect x="22" y="16" width="10" height="16" rx="1"/>
-        <path d="M13 8V6M27 16v-2M13 32v2M27 32v2"/>
-      </svg>
-      <div class="industry-name">Municipal & Commercial</div>
-      <div class="industry-desc">STP systems for residential complexes, hotels, and municipal bodies. Packaged plants that fit tight urban footprints.</div>
+
+    <div class="ind-card reveal" style="transition-delay:.06s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=70&auto=format" alt="Pharmaceuticals" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">02</div>
+        <div class="ind-name">Pharmaceuticals &amp; Chemical</div>
+        <div class="ind-desc">API, bulk drug, and chemical manufacturing wastewater treatment.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
     </div>
-    <div class="industry-card reveal" style="transition-delay:0.3s">
-      <div class="industry-num">06</div>
-      <svg class="industry-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 32l4-16 4 8 4-12 4 8 4-4"/>
-        <circle cx="12" cy="20" r="2"/>
-        <circle cx="28" cy="16" r="2"/>
-      </svg>
-      <div class="industry-name">Power & Energy</div>
-      <div class="industry-desc">Cooling tower blowdown and boiler feed water treatment. DM plants and softeners for power generation facilities.</div>
+
+    <div class="ind-card reveal" style="transition-delay:.12s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=70&auto=format" alt="Textile and Dyeing" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">03</div>
+        <div class="ind-name">Textile &amp; Dyeing</div>
+        <div class="ind-desc">Colour removal and COD reduction for textile effluent streams.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
     </div>
+
+    <div class="ind-card reveal" style="transition-delay:.06s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=70&auto=format" alt="Steel and Foundry" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">04</div>
+        <div class="ind-name">Steel &amp; Foundry</div>
+        <div class="ind-desc">Suspended solids, oil, and heavy metal removal for metal industry wastewater.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
+    </div>
+
+    <div class="ind-card reveal" style="transition-delay:.12s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=70&auto=format" alt="Food and Dairy" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">05</div>
+        <div class="ind-name">Food, Dairy &amp; Refinery</div>
+        <div class="ind-desc">Biological treatment for high-organic-load food and dairy processing effluent.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
+    </div>
+
+    <div class="ind-card reveal" style="transition-delay:.18s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=70&auto=format" alt="Plastic Engineering Automobile" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">06</div>
+        <div class="ind-name">Plastic, Engineering &amp; Auto</div>
+        <div class="ind-desc">ETP systems for plastics, engineering workshops, and auto manufacturers.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
+    </div>
+
+    <div class="ind-card reveal">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=70&auto=format" alt="Hotels and Hospitals" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">07</div>
+        <div class="ind-name">Hotels &amp; Hospitals</div>
+        <div class="ind-desc">Package STP systems for commercial and healthcare establishments.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
+    </div>
+
+    <div class="ind-card reveal" style="transition-delay:.06s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&q=70&auto=format" alt="Pulp Paper Bottling" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">08</div>
+        <div class="ind-name">Pulp, Paper &amp; Bottling</div>
+        <div class="ind-desc">ETP and water treatment for pulp and paper mills and bottling plants.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
+    </div>
+
+    <div class="ind-card reveal" style="transition-delay:.12s">
+      <img class="ind-img" src="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?w=600&q=70&auto=format" alt="Minerals Mines" loading="lazy">
+      <div class="ind-overlay"></div>
+      <div class="ind-content">
+        <div class="ind-num">09</div>
+        <div class="ind-name">Minerals, Mines &amp; Municipal</div>
+        <div class="ind-desc">Mine water treatment, sewage treatment, and municipal drinking water systems.</div>
+      </div>
+      <div class="ind-teal-bar"></div>
+    </div>
+
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section id="products">
-  <div class="section-eyebrow reveal">Our systems</div>
-  <h2 class="section-title reveal">Treatment technology<br>for every challenge</h2>
-  <p class="section-lead reveal">From inlet screening to evaporation and salt recovery. We cover the complete treatment chain.</p>
-
-  <div class="products-grid">
-
-    <div class="product-card reveal">
-      <div class="product-tag">Wastewater Treatment</div>
-      <div class="product-name">Effluent Treatment Plant (ETP)</div>
-      <div class="product-desc">Multi-stage physical, chemical, and biological treatment for industrial effluent. Designed to meet MPCB / CPCB discharge norms and EU Industrial Emissions Directive standards.</div>
-      <div class="product-specs">
-        <div class="spec-item">
-          <div class="spec-label">Capacity range</div>
-          <div class="spec-val">5 – 500 KLD</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Treatment stages</div>
-          <div class="spec-val">Up to 5-stage</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Industries</div>
-          <div class="spec-val">Textiles, Chemical, Food</div>
-        </div>
-      </div>
-      <a href="#contact" class="product-link">Request datasheet →</a>
+<section class="products" id="products">
+  <div class="prod-header">
+    <div>
+      <div class="sec-eyebrow reveal">Our systems</div>
+      <h2 class="reveal">Complete water treatment<br>technology range</h2>
     </div>
-
-    <div class="product-card reveal" style="transition-delay:0.1s">
-      <div class="product-tag">Zero Liquid Discharge</div>
-      <div class="product-name">ZLD Evaporator System</div>
-      <div class="product-desc">Forced circulation evaporators and crystallizers that eliminate liquid discharge entirely. Recover water and saleable by-products from your most challenging effluent streams.</div>
-      <div class="product-specs">
-        <div class="spec-item">
-          <div class="spec-label">Recovery</div>
-          <div class="spec-val">Up to 99%</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Evaporation rate</div>
-          <div class="spec-val">0.5 – 50 TPH</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">TDS handled</div>
-          <div class="spec-val">Up to 300,000 mg/L</div>
-        </div>
-      </div>
-      <a href="#contact" class="product-link">Request datasheet →</a>
+    <p class="sec-lead reveal" style="font-size:14px;max-width:300px">From filtration to zero liquid discharge — the complete chain.</p>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card reveal">
+      <div class="prod-tag">Wastewater Treatment</div>
+      <div class="prod-name">Effluent Treatment Plant (ETP)</div>
+      <div class="prod-desc">Multi-stage physical, chemical, and biological treatment for industrial effluent to meet Pollution Control Board discharge norms.</div>
+      <ul class="prod-feats">
+        <li>Physical, chemical &amp; biological treatment stages</li>
+        <li>Trickling filters, clarifiers, tube settlers, oil skimmers</li>
+        <li>Diffused aeration, aerators, agitators/mixers</li>
+        <li>Retrofitting of existing ETPs to current PCB norms</li>
+      </ul>
+      <a href="#contact" class="prod-link">Enquire about ETP →</a>
     </div>
-
-    <div class="product-card reveal" style="transition-delay:0.15s">
-      <div class="product-tag">Sewage Treatment</div>
-      <div class="product-name">Sewage Treatment Plant (STP)</div>
-      <div class="product-desc">MBR, SBR, and MBBR-based sewage treatment for residential complexes, commercial buildings, and municipalities. Treated water meets reuse standards.</div>
-      <div class="product-specs">
-        <div class="spec-item">
-          <div class="spec-label">Capacity range</div>
-          <div class="spec-val">10 – 1000 KLD</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">Output quality</div>
-          <div class="spec-val">Reuse grade</div>
-        </div>
-      </div>
-      <a href="#contact" class="product-link">Request datasheet →</a>
+    <div class="prod-card reveal" style="transition-delay:.1s">
+      <div class="prod-tag">Sewage Treatment</div>
+      <div class="prod-name">Sewage Treatment Plant (STP)</div>
+      <div class="prod-desc">Complete sewage treatment using SAFF, MBBR/FAB, MBR, and anaerobic digester technologies including package plants.</div>
+      <ul class="prod-feats">
+        <li>SAFF — Submerged Fixed Film Aeration Technology</li>
+        <li>MBBR / FAB — Moving Bed Bio Reactor / Fluidized Bio Reactor</li>
+        <li>MBR — Membrane Bio Reactor</li>
+        <li>Anaerobic digesters for high-load applications</li>
+      </ul>
+      <a href="#contact" class="prod-link">Enquire about STP →</a>
     </div>
-
-    <div class="product-card reveal" style="transition-delay:0.2s">
-      <div class="product-tag">Water Purification</div>
-      <div class="product-name">Reverse Osmosis Plant (RO)</div>
-      <div class="product-desc">Industrial RO systems for process water, drinking water, and boiler feed water. High-rejection membranes with automated CIP and remote monitoring capability.</div>
-      <div class="product-specs">
-        <div class="spec-item">
-          <div class="spec-label">Capacity range</div>
-          <div class="spec-val">500 LPH – 100 KLD</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-label">TDS rejection</div>
-          <div class="spec-val">Up to 99.5%</div>
-        </div>
-      </div>
-      <a href="#contact" class="product-link">Request datasheet →</a>
+    <div class="prod-card reveal" style="transition-delay:.1s">
+      <div class="prod-tag">Water Purification</div>
+      <div class="prod-name">Reverse Osmosis &amp; Membrane Systems</div>
+      <div class="prod-desc">Industrial RO plants, ultra filtration, nano filtration, and mineral water plants for process water and drinking water.</div>
+      <ul class="prod-feats">
+        <li>Industrial Reverse Osmosis (RO) plants</li>
+        <li>Ultra filtration &amp; nano filtration</li>
+        <li>Mineral water plants</li>
+        <li>Sand bed, activated carbon &amp; cartridge filters</li>
+      </ul>
+      <a href="#contact" class="prod-link">Enquire about RO →</a>
     </div>
-
+    <div class="prod-card reveal" style="transition-delay:.15s">
+      <div class="prod-tag">Softening &amp; Demineralisation</div>
+      <div class="prod-name">Water Softening &amp; DM/DI Plants</div>
+      <div class="prod-desc">Water softening, DM, and DI plants for boiler feed water, process water, and industrial utility water.</div>
+      <ul class="prod-feats">
+        <li>Water softening plant</li>
+        <li>DM / DI water plant</li>
+        <li>Ion exchange resin systems</li>
+        <li>Multimedia filters</li>
+      </ul>
+      <a href="#contact" class="prod-link">Enquire about DM/Softeners →</a>
+    </div>
+    <div class="prod-card reveal" style="transition-delay:.2s">
+      <div class="prod-tag">Disinfection</div>
+      <div class="prod-name">UV, Ozonation &amp; Chlorination</div>
+      <div class="prod-desc">UV purifiers, ozonators, and chlorination systems for drinking water, process water, and treated effluent disinfection.</div>
+      <ul class="prod-feats">
+        <li>U.V. purifier systems</li>
+        <li>Ozonation systems</li>
+        <li>Chlorination systems</li>
+      </ul>
+      <a href="#contact" class="prod-link">Enquire about disinfection →</a>
+    </div>
+    <div class="prod-card reveal" style="transition-delay:.25s">
+      <div class="prod-tag">Zero Discharge</div>
+      <div class="prod-name">Wastewater Evaporator &amp; ZLD</div>
+      <div class="prod-desc">Wastewater evaporators and Zero Liquid Discharge systems that eliminate all liquid discharge and recover water for process reuse.</div>
+      <ul class="prod-feats">
+        <li>Wastewater evaporator systems</li>
+        <li>Zero Liquid Discharge (ZLD) plants</li>
+        <li>High-TDS effluent concentration</li>
+        <li>Water recovery for process reuse</li>
+      </ul>
+      <a href="#contact" class="prod-link">Enquire about ZLD →</a>
+    </div>
   </div>
 </section>
 
 <!-- ZLD EXPLAINER -->
-<div class="zld-section" id="zld">
-  <div class="zld-content">
-    <div class="section-eyebrow reveal">How it works</div>
-    <h2 class="section-title reveal">Zero Liquid Discharge —<br>the complete cycle</h2>
-    <p class="section-lead reveal" style="margin-bottom: 36px">
-      ZLD is no longer just a regulation requirement in India and Europe — it's a competitive advantage. We recover and recycle up to 99% of water from your most challenging effluent, returning it to your process and eliminating discharge penalties entirely.
-    </p>
-    <div class="reveal" style="transition-delay:0.2s">
-      <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px">
-        Our ZLD systems are designed to the same engineering standards expected by European buyers — full P&ID documentation, CE-compatible electrical panels, and SCADA-ready controls.
-      </p>
-    </div>
-    <a href="#contact" class="btn-primary reveal" style="display:inline-block; transition-delay:0.3s">Discuss your ZLD project</a>
+<div class="zld-wrap" id="zld">
+  <div class="zld-left">
+    <div class="sec-eyebrow reveal">Zero Liquid Discharge</div>
+    <h2 class="reveal">Eliminate discharge.<br>Recover your water.</h2>
+    <p class="sec-lead reveal" style="margin-bottom:24px">ZLD systems treat your most difficult high-TDS wastewater streams through evaporation until no liquid discharge remains. The recovered water returns to your process.</p>
+    <p class="reveal" style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:28px;transition-delay:.1s">With tightening ZLD mandates from India's Pollution Control Boards — particularly for textile, sugar, pharmaceutical, and chemical industries — we help clients achieve full compliance while recovering water for reuse.</p>
+    <a href="#contact" class="btn-p reveal" style="transition-delay:.2s">Discuss your ZLD project</a>
   </div>
-
-  <div class="zld-visual">
-    <div class="zld-diagram">
-      <div class="zld-flow">
-        <div class="flow-step reveal">
-          <span class="flow-step-num">01</span>
-          <span class="flow-step-name">Primary screening &amp; equalization</span>
-          <span class="flow-step-arrow">↓</span>
-        </div>
-        <div class="flow-connector"></div>
-        <div class="flow-step reveal" style="transition-delay:0.1s">
-          <span class="flow-step-num">02</span>
-          <span class="flow-step-name">Physico-chemical treatment</span>
-          <span class="flow-step-arrow">↓</span>
-        </div>
-        <div class="flow-connector"></div>
-        <div class="flow-step reveal" style="transition-delay:0.2s">
-          <span class="flow-step-num">03</span>
-          <span class="flow-step-name">Biological treatment (MBBR/MBR)</span>
-          <span class="flow-step-arrow">↓</span>
-        </div>
-        <div class="flow-connector"></div>
-        <div class="flow-step reveal" style="transition-delay:0.3s">
-          <span class="flow-step-num">04</span>
-          <span class="flow-step-name">Multi-effect evaporator</span>
-          <span class="flow-step-arrow">↓</span>
-        </div>
-        <div class="flow-connector"></div>
-        <div class="flow-step reveal" style="transition-delay:0.4s">
-          <span class="flow-step-num">05</span>
-          <span class="flow-step-name">Crystallizer &amp; salt recovery</span>
-          <span class="flow-step-arrow">↺</span>
-        </div>
-      </div>
-      <div class="zld-recovery reveal" style="transition-delay:0.5s">
-        <div class="recovery-num">99%</div>
-        <div class="recovery-text">Water recovered &amp; returned<br>to your process stream</div>
-      </div>
+  <div class="zld-right">
+    <div class="zld-flow">
+      <div class="fstep reveal"><span class="fnum">01</span><span class="fname">Primary screening &amp; equalisation</span><span class="farr">↓</span></div>
+      <div class="fconn"></div>
+      <div class="fstep reveal" style="transition-delay:.1s"><span class="fnum">02</span><span class="fname">Physico-chemical treatment</span><span class="farr">↓</span></div>
+      <div class="fconn"></div>
+      <div class="fstep reveal" style="transition-delay:.2s"><span class="fnum">03</span><span class="fname">Biological treatment (MBBR / MBR)</span><span class="farr">↓</span></div>
+      <div class="fconn"></div>
+      <div class="fstep reveal" style="transition-delay:.3s"><span class="fnum">04</span><span class="fname">Membrane filtration / RO</span><span class="farr">↓</span></div>
+      <div class="fconn"></div>
+      <div class="fstep reveal" style="transition-delay:.4s"><span class="fnum">05</span><span class="fname">Wastewater evaporator</span><span class="farr">↺</span></div>
+      <div class="zld-note reveal" style="transition-delay:.5s"><strong>Result:</strong> Zero liquid discharge — recovered water returned to your process stream.</div>
     </div>
   </div>
 </div>
 
-<!-- CERTIFICATIONS -->
-<div class="certs">
-  <div class="certs-inner">
-    <span class="certs-label">Compliance &amp; quality</span>
-    <div class="cert-badges">
-      <div class="cert-badge"><span class="cert-dot"></span>ISO 9001:2015</div>
-      <div class="cert-badge"><span class="cert-dot"></span>CPCB Approved</div>
-      <div class="cert-badge"><span class="cert-dot"></span>MPCB Compliant</div>
-      <div class="cert-badge"><span class="cert-dot"></span>CE Compatible</div>
-      <div class="cert-badge"><span class="cert-dot"></span>REACH Aware</div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="sec-eyebrow reveal">After-sales &amp; operations</div>
+  <h2 class="reveal">Services that keep<br>your plant running</h2>
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <svg class="svc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="9"/><path d="M14 8v6l3.5 2"/></svg>
+      <div class="svc-name">Operation &amp; Maintenance Contracts</div>
+      <div class="svc-desc">We undertake O&amp;M contracts for water and wastewater treatment plants — keeping your system compliant and performing year-round.</div>
     </div>
-  </div>
-</div>
-
-<!-- GLOBAL REACH -->
-<section class="global-section" id="global">
-  <div class="section-eyebrow reveal">Global reach</div>
-  <h2 class="section-title reveal">India's precision.<br>Germany's standards.</h2>
-
-  <div class="global-inner">
-    <div>
-      <div class="global-text-block reveal">
-        <p>We have been supplying water treatment systems to industrial buyers in <strong>Germany, Austria, and Switzerland</strong> since 2019. Our documentation package — P&IDs, O&M manuals, CE declarations — meets what European procurement teams expect.</p>
-      </div>
-      <div class="global-text-block reveal" style="transition-delay:0.15s">
-        <p>We exhibit at <strong>IFAT Munich</strong> and maintain direct relationships with German engineering consultants and EPCs. If you met us at a trade show, you've come to the right place.</p>
-      </div>
-      <a href="#contact" class="btn-ghost reveal" style="margin-top:8px; display:inline-flex; transition-delay:0.25s">
-        Get our export brochure
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+    <div class="svc-card reveal" style="transition-delay:.1s">
+      <svg class="svc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="22" height="14" rx="2"/><path d="M9 18v-4h4v4M17 18v-5h4v5"/></svg>
+      <div class="svc-name">Analytical Services</div>
+      <div class="svc-desc">Analytical services for water and wastewater. Complete laboratory setup, conductivity meters, TDS meters, water testing and bacterial test kits.</div>
     </div>
-
-    <div class="reach-grid">
-      <div class="reach-item reveal">
-        <div class="reach-country">🇩🇪 Germany</div>
-        <div class="reach-detail">Chemical &amp; pharma ETP projects. IFAT Munich presence.</div>
-      </div>
-      <div class="reach-item reveal" style="transition-delay:0.1s">
-        <div class="reach-country">🇦🇹 Austria</div>
-        <div class="reach-detail">Food processing wastewater treatment systems.</div>
-      </div>
-      <div class="reach-item reveal" style="transition-delay:0.15s">
-        <div class="reach-country">🇮🇳 India</div>
-        <div class="reach-detail">Maharashtra, Gujarat, Tamil Nadu, Delhi NCR. 250+ installations.</div>
-      </div>
-      <div class="reach-item reveal" style="transition-delay:0.2s">
-        <div class="reach-country">🌐 Exporting</div>
-        <div class="reach-detail">UAE, South Africa, and Southeast Asia project pipeline.</div>
-      </div>
+    <div class="svc-card reveal" style="transition-delay:.1s">
+      <svg class="svc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 9h18M5 15h12M5 21h7"/><path d="M21 19l3 3-3 3"/></svg>
+      <div class="svc-name">Upgradation &amp; Automation</div>
+      <div class="svc-desc">Upgrading and automating existing plants to meet current PCB norms. Retrofitting for compliance is our proven speciality.</div>
+    </div>
+    <div class="svc-card reveal" style="transition-delay:.15s">
+      <svg class="svc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="10" r="5"/><path d="M4 26c0-5.523 4.477-10 10-10s10 4.477 10 10"/></svg>
+      <div class="svc-name">Troubleshooting Services</div>
+      <div class="svc-desc">Expert troubleshooting for underperforming or non-compliant plants. We diagnose problems and restore your system to full compliance.</div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="section-eyebrow reveal">Get in touch</div>
-  <h2 class="section-title reveal">Start your project</h2>
-  <p class="section-lead reveal">Tell us your effluent profile and capacity. We'll respond within 1 business day (India) or 2 business days (Europe).</p>
+<!-- CHEMICALS -->
+<section class="chem-bg" id="chemicals">
+  <div class="sec-eyebrow reveal">Treatment chemicals</div>
+  <h2 class="reveal">Chemicals for every<br>treatment application</h2>
+  <p class="sec-lead reveal">We supply coagulants, flocculants, disinfectants, and specialised boiler and cooling tower chemicals.</p>
+  <div class="chem-grid">
+    <div class="chem-card reveal">
+      <div class="chem-title">Cooling Tower Chemicals</div>
+      <ul class="chem-list">
+        <li>Bio dispersant</li><li>Biocides (Totally Chlorine Free — TCF)</li>
+        <li>Corrosion inhibitors</li><li>Antiscalent</li><li>Dispersants</li>
+      </ul>
+    </div>
+    <div class="chem-card reveal" style="transition-delay:.1s">
+      <div class="chem-title">Boiler Chemicals</div>
+      <ul class="chem-list">
+        <li>Oxygen scavengers</li><li>Corrosion inhibitors</li>
+        <li>Antiscalent</li><li>Antifoam / de-foamers</li>
+        <li>Sludge conditioners</li><li>Condensate treatment</li><li>pH booster</li>
+      </ul>
+    </div>
+    <div class="chem-card reveal" style="transition-delay:.2s">
+      <div class="chem-title">General Treatment Chemicals</div>
+      <ul class="chem-list">
+        <li>Coagulants &amp; flocculants</li><li>Disinfectants</li>
+        <li>Sugar chemicals</li><li>Specialised polymers</li>
+        <li>Ion exchange resins</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- CLIENTS -->
+<section class="clients-bg" id="clients">
+  <div class="clients-intro">
+    <div>
+      <div class="sec-eyebrow reveal">Our clients</div>
+      <h2 class="reveal">Trusted by India's<br>leading companies</h2>
+    </div>
+    <p class="sec-lead reveal" style="font-size:14px;max-width:300px">A glimpse at the companies who trust us to deliver excellence.</p>
+  </div>
+  <div class="clients-grid">
+    <div class="client-cell reveal"><div class="client-name">Moglix</div></div>
+    <div class="client-cell reveal" style="transition-delay:.04s"><div class="client-name">Moët Hennessy</div></div>
+    <div class="client-cell reveal" style="transition-delay:.08s"><div class="client-name">Vedanta</div></div>
+    <div class="client-cell reveal" style="transition-delay:.12s"><div class="client-name">Lemon Tree Hotels</div></div>
+    <div class="client-cell reveal" style="transition-delay:.16s"><div class="client-name">Adani</div></div>
+    <div class="client-cell reveal" style="transition-delay:.04s"><div class="client-name">CPF</div></div>
+    <div class="client-cell reveal" style="transition-delay:.08s"><div class="client-name">DLIPL</div></div>
+    <div class="client-cell reveal" style="transition-delay:.12s"><div class="client-name">Glenmark</div></div>
+    <div class="client-cell reveal" style="transition-delay:.16s"><div class="client-name">Curia</div></div>
+    <div class="client-cell reveal" style="transition-delay:.2s"><div class="client-name">Powerlite</div></div>
+    <div class="client-cell reveal" style="transition-delay:.04s"><div class="client-name">Narayana Agro Oils</div></div>
+    <div class="client-cell reveal" style="transition-delay:.08s"><div class="client-name">ARV Group</div></div>
+    <div class="client-cell reveal" style="transition-delay:.12s"><div class="client-name">Singhania System Technologists</div></div>
+    <div class="client-cell reveal" style="transition-delay:.16s"><div class="client-name">Zydus Takeda</div></div>
+    <div class="client-cell reveal" style="transition-delay:.2s"><div class="client-name">Kolte-Patil</div></div>
+    <div class="client-cell reveal" style="transition-delay:.04s"><div class="client-name">Konkan</div></div>
+    <div class="client-cell reveal" style="transition-delay:.08s"><div class="client-name">Beam Suntory</div></div>
+    <div class="client-cell reveal" style="transition-delay:.12s"><div class="client-name">+ Many More</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="sec-eyebrow reveal">Get in touch</div>
+  <h2 class="reveal">Let's discuss<br>your project</h2>
+  <p class="sec-lead reveal">Tell us your effluent type, industry, and daily volume. We respond within one business day.</p>
   <div class="contact-inner">
-    <div class="contact-info">
-      <div class="contact-item reveal">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-            <circle cx="12" cy="9" r="2.5"/>
-          </svg>
-        </div>
+    <div>
+      <div class="citem reveal">
+        <div class="cicon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
         <div>
-          <div class="contact-label">Address</div>
-          <div class="contact-value">Ambernath, Maharashtra 421501, India</div>
+          <div class="clabel">Address</div>
+          <div class="cval">001, Shanti Villa CHS, Near Chandrasuman Mangal Karyalaya,<br>B. Cabin Road, Ambernath (East),<br>District: Thane, Maharashtra — 421501</div>
         </div>
       </div>
-      <div class="contact-item reveal" style="transition-delay:0.1s">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-        </div>
+      <div class="citem reveal" style="transition-delay:.1s">
+        <div class="cicon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
         <div>
-          <div class="contact-label">Phone / WhatsApp</div>
-          <div class="contact-value">+91 99231 34736</div>
+          <div class="clabel">Mobile / WhatsApp</div>
+          <div class="cval"><a href="tel:+919923134736">+91 99231 34736</a> &nbsp;|&nbsp; <a href="tel:+919324284736">+91 93242 84736</a></div>
         </div>
       </div>
-      <div class="contact-item reveal" style="transition-delay:0.2s">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-        </div>
+      <div class="citem reveal" style="transition-delay:.15s">
+        <div class="cicon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">info@nirmalwater.com</div>
+          <div class="clabel">Email</div>
+          <div class="cval"><a href="mailto:nirmalwater@hotmail.com">nirmalwater@hotmail.com</a><br><a href="mailto:info@nirmalwater.com">info@nirmalwater.com</a></div>
         </div>
       </div>
-      <div class="contact-item reveal" style="transition-delay:0.3s">
-        <div class="contact-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
+      <div class="citem reveal" style="transition-delay:.2s">
+        <div class="cicon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 20h20M8 20v-3M16 20v-3"/></svg></div>
         <div>
-          <div class="contact-label">Business hours</div>
-          <div class="contact-value">Mon–Sat, 9 AM – 6 PM IST<br><span style="font-size:13px;color:var(--muted)">(1:30 PM – 10:30 PM CET)</span></div>
+          <div class="clabel">Office</div>
+          <div class="cval"><a href="tel:+917276081958">+91 72760 81958</a></div>
         </div>
       </div>
     </div>
-
-    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label>Your name</label>
-          <input type="text" placeholder="Hans Müller" required>
-        </div>
-        <div class="form-group">
-          <label>Company</label>
-          <input type="text" placeholder="Acme Chemie GmbH">
-        </div>
+    <form class="cform reveal" onsubmit="handleSubmit(event)">
+      <div class="frow">
+        <div class="fg"><label>Your name</label><input type="text" placeholder="Full name" required></div>
+        <div class="fg"><label>Company</label><input type="text" placeholder="Company name"></div>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="hans@acmechemie.de" required>
-        </div>
-        <div class="form-group">
-          <label>Country</label>
-          <select>
-            <option value="">Select country</option>
-            <option>Germany</option>
-            <option>Austria</option>
-            <option>Switzerland</option>
-            <option>India</option>
-            <option>United Arab Emirates</option>
-            <option>Other</option>
-          </select>
-        </div>
+      <div class="frow">
+        <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+        <div class="fg"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
       </div>
-      <div class="form-group">
+      <div class="fg">
         <label>System of interest</label>
         <select>
           <option value="">Select system type</option>
           <option>Effluent Treatment Plant (ETP)</option>
-          <option>Zero Liquid Discharge (ZLD)</option>
           <option>Sewage Treatment Plant (STP)</option>
+          <option>Zero Liquid Discharge (ZLD)</option>
           <option>Reverse Osmosis (RO)</option>
+          <option>Water Softening / DM Plant</option>
+          <option>UV / Ozonation / Chlorination</option>
+          <option>Cooling Tower / Boiler Chemicals</option>
+          <option>O&amp;M / Upgradation / Troubleshooting</option>
           <option>Not sure — need consultation</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Project details</label>
-        <textarea placeholder="Describe your effluent type, daily volume (m³/day), and key parameters (COD, TDS, pH). The more you share, the faster we can respond."></textarea>
-      </div>
-      <button type="submit" class="btn-primary" style="align-self:flex-start; border:none">Send inquiry →</button>
+      <div class="fg"><label>Project details</label><textarea placeholder="Describe your industry, effluent type, and approximate daily volume (KLD/m³ per day)."></textarea></div>
+      <button type="submit" class="btn-p" style="align-self:flex-start;border:none;cursor:pointer">Send enquiry →</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Nirmal<span>.</span>WaterTech</div>
-  <ul class="footer-links">
-    <li><a href="#industries">Industries</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#zld">ZLD</a></li>
-    <li><a href="#global">Export</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="footer-right">© 2025 Nirmal Water Tech. Ambernath, India.</div>
+  <div class="ft-top">
+    <div>
+      <div class="ft-logo">Nirmal<em>.</em>WaterTech</div>
+      <div class="ft-tag">Ultimate Solution Providers For Environment Protection<br>An ISO 9001:2015 Certified Company — Ambernath, Maharashtra</div>
+    </div>
+    <ul class="ft-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#zld">ZLD</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#chemicals">Chemicals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2025 Nirmal Water Tech — 001, Shanti Villa CHS, B. Cabin Road, Ambernath (East), Dist. Thane, Maharashtra 421501</span>
+    <span>RO · Softening · DM Plant · ETP · STP · ZLD · UV · Ozonation · Cooling Tower &amp; Boiler Chemicals</span>
+  </div>
 </footer>
 
 <script>
-// Nav scroll effect
+// Scrolled nav
 const nav = document.getElementById('mainNav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-});
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('menu-open');
-});
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', () => nav.classList.toggle('menu-open'));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('menu-open')));
 
 // Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-reveals.forEach(el => observer.observe(el));
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 // Counter animation
 function animateCounter(el) {
   const target = parseInt(el.dataset.target);
-  const duration = 1800;
+  const dur = 2000;
   const start = performance.now();
   const tick = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
+    const p = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 4);
     el.textContent = Math.floor(eased * target);
-    if (progress < 1) requestAnimationFrame(tick);
+    if (p < 1) requestAnimationFrame(tick);
     else el.textContent = target;
   };
   requestAnimationFrame(tick);
 }
 
-const counterObserver = new IntersectionObserver((entries) => {
+const statObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.querySelectorAll('.counter').forEach(animateCounter);
-      counterObserver.unobserve(e.target);
+      statObs.unobserve(e.target);
     }
   });
-}, { threshold: 0.5 });
-document.querySelectorAll('#stats').forEach(el => counterObserver.observe(el));
+}, { threshold: 0.4 });
+const statsEl = document.getElementById('stats');
+if (statsEl) statObs.observe(statsEl);
 
-// Form
+// Form submit
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button[type=submit]');
-  btn.textContent = 'Sent! We\'ll be in touch.';
+  btn.textContent = "Enquiry sent — we'll be in touch.";
   btn.style.background = '#00856e';
   btn.disabled = true;
 }
