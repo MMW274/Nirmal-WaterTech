@@ -181,6 +181,8 @@ h2{font-family:var(--fd);font-size:clamp(26px,3.4vw,46px);font-weight:700;letter
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .fg{display:flex;flex-direction:column;gap:5px}
 .fg label{font-size:10px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.req-mark{color:var(--teal);font-weight:700;font-size:13px;line-height:1;margin-left:4px}
+.req-help{font-size:11px;color:var(--muted);margin-top:2px}
 .fg input,.fg select,.fg textarea{background:var(--navy-light);border:1px solid var(--border);color:var(--white);font-family:var(--fb);font-size:13px;padding:10px 13px;border-radius:2px;outline:none;transition:border-color .2s;appearance:none}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal)}
 .fg input::placeholder,.fg textarea::placeholder{color:rgba(122,143,168,.4)}
@@ -682,11 +684,11 @@ footer{padding:44px 60px;border-top:1px solid var(--border);background:var(--nav
     </div>
     <form class="cform reveal" onsubmit="handleSubmit(event)" id="contactForm">
       <div class="frow">
-        <div class="fg"><label data-i18n="contact.fname">Your name</label><input type="text" name="name" data-i18n-placeholder="contact.phName" placeholder="Full name" required></div>
+        <div class="fg"><label><span data-i18n="contact.fname">Your name</span><span class="req-mark" aria-hidden="true">*</span></label><input type="text" name="name" data-i18n-placeholder="contact.phName" placeholder="Full name" required></div>
         <div class="fg"><label data-i18n="contact.fcompany">Company</label><input type="text" name="company" data-i18n-placeholder="contact.phCompany" placeholder="Company name"></div>
       </div>
       <div class="frow">
-        <div class="fg"><label data-i18n="contact.femail">Email</label><input type="email" name="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required></div>
+        <div class="fg"><label><span data-i18n="contact.femail">Email</span><span class="req-mark" aria-hidden="true">*</span></label><input type="email" name="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required></div>
         <div class="fg"><label data-i18n="contact.fphone">Phone</label><input type="tel" name="phone" data-i18n-placeholder="contact.phPhone" placeholder="+91 XXXXX XXXXX"></div>
       </div>
       <div class="fg">
@@ -705,6 +707,7 @@ footer{padding:44px 60px;border-top:1px solid var(--border);background:var(--nav
         </select>
       </div>
       <div class="fg"><label data-i18n="contact.fdetails">Project details</label><textarea name="message" data-i18n-placeholder="contact.phDetails" placeholder="Describe your industry, effluent type, and approximate daily volume (KLD/m³ per day)."></textarea></div>
+      <p class="req-help" data-i18n="contact.requiredHint">* Indicates required fields.</p>
       <button type="submit" class="btn-p" id="submitBtn" style="align-self:flex-start;border:none;cursor:pointer" data-i18n="contact.submit">Send enquiry →</button>
     </form>
   </div>
@@ -772,11 +775,19 @@ const translations = {
   }
 };
 
+const supplementalTranslations = {
+  en: { contact: { requiredHint: '* Indicates required fields.' } },
+  de: { contact: { requiredHint: '* Kennzeichnet Pflichtfelder.' } }
+};
+
 function getT(lang, key) {
   const parts = key.split('.');
   let v = translations[lang];
   for (const p of parts) { v = v && v[p]; }
-  return v != null ? String(v) : '';
+  if (v != null) return String(v);
+  let supplemental = supplementalTranslations[lang];
+  for (const p of parts) { supplemental = supplemental && supplemental[p]; }
+  return supplemental != null ? String(supplemental) : '';
 }
 
 function applyTranslations(lang) {
