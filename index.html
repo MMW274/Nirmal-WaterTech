@@ -861,13 +861,14 @@ async function handleSubmit(e) {
   btn.disabled = true;
   btn.style.opacity = '.6';
 
+  const f = (n) => (form.elements.namedItem(n).value || '').trim();
   const payload = {
-    name: form.name.value.trim(),
-    company: form.company.value.trim(),
-    email: form.email.value.trim(),
-    phone: form.phone.value.trim(),
-    service: form.service.value,
-    message: form.message.value.trim()
+    name: f('name'),
+    company: f('company'),
+    email: f('email'),
+    phone: f('phone'),
+    service: f('service'),
+    message: f('message')
   };
 
   try {

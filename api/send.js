@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const { name, company, phone, email, service, message } = req.body;
 
-  if (!name || !phone || !service) {
+  if (!name || !email) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     } else {
       const error = await response.json();
       console.error('Resend error:', error);
-      return res.status(500).json({ error: 'Failed to send email' });
+      return res.status(500).json({ error: 'Failed to send email', detail: error });
     }
   } catch (err) {
     console.error('Server error:', err);
